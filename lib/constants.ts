@@ -5,7 +5,15 @@ import {
   MessageCircle,
   Settings,
 } from "lucide-react";
-import { BsPerson, BsTools } from "react-icons/bs";
+import {
+  BsGithub,
+  BsInstagram,
+  BsLinkedin,
+  BsPerson,
+  BsTelegram,
+  BsTools,
+  BsTwitterX,
+} from "react-icons/bs";
 
 export const NavLinks = [
   {
@@ -50,4 +58,12 @@ export const NavLinks = [
     icon: MessageCircle,
     current: false,
   },
+];
+
+export const SocialLinks = [
+  { component: BsGithub, key: "github", link: "", name: "Github" },
+  { component: BsLinkedin, key: "linkedin", link: "", name: "Linkedin" },
+  { component: BsTwitterX, key: "twitter", link: "", name: "TwitterX" },
+  { component: BsTelegram, key: "telegram", link: "", name: "Telegram" },
+  // { component: BsInstagram, key: "instagram", link: "", name: "Instagram" },
 ];

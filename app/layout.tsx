@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import { Space_Grotesk } from "next/font/google";
+import { ThemeProvider } from "@/components/theme-provider";
 
 const space = Space_Grotesk({
   subsets: ["latin"],
@@ -32,7 +33,14 @@ export default function RootLayout({
       <body
         className={`${space.className} ${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {children}
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   );

@@ -1,12 +1,13 @@
 import { NavLinks } from "@/lib/constants";
 import React from "react";
 import Navlink from "./Navlink";
+import { ThemeToggle } from "../ui/ThemeToggle";
 
 type Props = {};
 
 export default function Navbar({}: Props) {
   return (
-    <div className="flex gap-6 p-8">
+    <div className="container h-11 flex sticky items-center gap-4 p-6">
       {NavLinks.map((link) => (
         <Navlink
           key={link.name}
@@ -15,6 +16,7 @@ export default function Navbar({}: Props) {
           icon={link.icon}
         />
       ))}
+      <ThemeToggle />
     </div>
   );
 }
