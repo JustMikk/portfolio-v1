@@ -14,11 +14,11 @@ export default function IntroSection({}: Props) {
         <div className="mb-12">
           <h3 className="text-2xl mb-6">Hello, I'm a Fullstack Developer</h3>
           <h1 className="text-5xl/normal font-normal">
-            A full-stack mobile app and web developer with over 3 years of
-            <span className="bg-violet-800 rounded-full p-3 py-0 font-medium text-center ml-3 -rotate-45 text-black">
-              experience
+            A skilled full-stack web and mobile-app
+            <span className="bg-violet-800 rounded-full p-3 py-0 font-medium text-center mx-3 -rotate-45 text-black">
+              developer
             </span>
-            .
+            with 3+ years of experience.
           </h1>
         </div>
 
@@ -39,16 +39,11 @@ export default function IntroSection({}: Props) {
           </div>
         </div>
 
-        {/* Tech stack Tooltips */}
-        <div className="flex justify-center gap-16 mb-16">
-          <AnimatedTooltip items={TechStack} />
-        </div>
-
         {/* About Me */}
 
         <div>
           <h4 className="text-lg mb-6">About me</h4>
-          <h3 className="text-xl font-light">
+          <h3 className="text-xl/normal font-light">
             A Fullstack developer, experienced with building both web and mobile
             apps. Profficent in Typescript & Javascript, Frameworks like React
             JS, Next JS, Express JS, React Native and more

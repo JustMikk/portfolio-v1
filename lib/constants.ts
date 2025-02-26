@@ -76,10 +76,16 @@ export const SocialLinks = [
 ];
 
 export const TechStack = [
-  { id: 2, name: "Typescript", image: "/images/Typescript.svg" },
-  { id: 1, name: "Next JS", image: "/images/NextJS.svg" },
-  { id: 5, name: "Javascript", image: "/images/Javascript.svg" },
-  { id: 3, name: "Tailwind CSS", image: "/images/TailwindCSS.svg" },
-  { id: 4, name: "Node JS", image: "/images/Node.js.svg" },
-  { id: 6, name: "Figma", image: "/images/Figma.svg" },
+  { id: 1, name: "HTML", image: "/images/HTML.svg" },
+  { id: 2, name: "CSS", image: "/images/CSS.svg" },
+  { id: 3, name: "Javascript", image: "/images/Javascript.svg" },
+  { id: 4, name: "Typescript", image: "/images/Typescript.svg" },
+  { id: 5, name: "React JS", image: "/images/React.svg" },
+  { id: 6, name: "Node JS", image: "/images/Node.js.svg" },
+  { id: 7, name: "Tailwind CSS", image: "/images/TailwindCSS.svg" },
+  { id: 8, name: "Redux", image: "/images/Redux.svg" },
+  { id: 9, name: "Next JS", image: "/images/NextJS.svg" },
+  { id: 10, name: "React Query", image: "/images/ReactQuery.svg" },
+  { id: 11, name: "Figma", image: "/images/Figma.svg" },
+  { id: 12, name: "Prisma", image: "/images/Prisma.svg" },
 ];
