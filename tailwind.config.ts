@@ -54,6 +54,17 @@ const config: Config = {
           "5": "hsl(var(--chart-5))",
         },
       },
+      typography: (theme: any) => ({
+        DEFAULT: {
+          css: {
+            h1: { color: theme("colors.violet-200") },
+            h2: { color: theme("colors.violet-200") },
+            h3: { color: theme("colors.violet-200") },
+            h4: { color: theme("colors.violet-200") },
+            h5: { color: theme("colors.violet-200") },
+          },
+        },
+      }),
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",

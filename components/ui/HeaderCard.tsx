@@ -27,16 +27,17 @@ export function HeaderCard() {
           />
         </CardItem>
         <CardItem className=" w-full flex flex-col items-center justify-center gap-2">
-          <h1 className="mt-16 text-2xl dark:text-green-100 ">
-            Mikiyas Hailegebreal
-          </h1>
-          <h2 className="text-xl dark:text-green-100"> Frontend Developer</h2>
+          <h1 className="mt-16 text-2xl ">Mikiyas Hailegebreal</h1>
+          <h2 className="text-xl"> Frontend Developer</h2>
         </CardItem>
         <CardItem className="w-full mt-5">
           <SocialLinks />
         </CardItem>
         <CardItem className="w-full mt-8">
-          <Button size="lg" className="w-full bg-green-600">
+          <Button
+            size="lg"
+            className="w-full bg-violet-800 text-gray-200 hover:text-violet-300 hover:bg-transparent hover:border hover:border-violet-400"
+          >
             Download CV
           </Button>
         </CardItem>

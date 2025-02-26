@@ -16,7 +16,10 @@ export default function SocialLinks({}: Props) {
   return (
     <div className="flex items-center justify-center gap-3">
       {socials.map(({ component: IconComponent, link, key }) => (
-        <div className="border rounded-full p-2 dark:border-neutral-700 border-neutral-400">
+        <div
+          key={key}
+          className="border rounded-full p-2 dark:border-neutral-700 border-neutral-400"
+        >
           <IconComponent
             onClick={() => router.push(link)}
             key={key}
