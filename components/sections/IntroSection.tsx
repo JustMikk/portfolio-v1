@@ -1,5 +1,7 @@
 import React from "react";
 import Section from "../layouts/Section";
+import { AnimatedTooltip } from "../ui/animated-tooltip";
+import { TechStack } from "@/lib/constants";
 
 type Props = {};
 
@@ -35,6 +37,11 @@ export default function IntroSection({}: Props) {
             <h1 className="text-6xl/normal font-normal">4+</h1>
             <h3 className="text-2xl w-1/3 text-wrap">Satisfied Clients</h3>
           </div>
+        </div>
+
+        {/* Tech stack Tooltips */}
+        <div className="flex justify-center gap-16 mb-16">
+          <AnimatedTooltip items={TechStack} />
         </div>
 
         {/* About Me */}

@@ -14,6 +14,13 @@ import {
   BsTools,
   BsTwitterX,
 } from "react-icons/bs";
+import {
+  SiFigma,
+  SiNextdotjs,
+  SiNodedotjs,
+  SiTailwindcss,
+  SiTypescript,
+} from "react-icons/si";
 
 export const NavLinks = [
   {
@@ -66,4 +73,13 @@ export const SocialLinks = [
   { component: BsTwitterX, key: "twitter", link: "", name: "TwitterX" },
   { component: BsTelegram, key: "telegram", link: "", name: "Telegram" },
   // { component: BsInstagram, key: "instagram", link: "", name: "Instagram" },
+];
+
+export const TechStack = [
+  { id: 2, name: "Typescript", image: "/images/Typescript.svg" },
+  { id: 1, name: "Next JS", image: "/images/NextJS.svg" },
+  { id: 5, name: "Javascript", image: "/images/Javascript.svg" },
+  { id: 3, name: "Tailwind CSS", image: "/images/TailwindCSS.svg" },
+  { id: 4, name: "Node JS", image: "/images/Node.js.svg" },
+  { id: 6, name: "Figma", image: "/images/Figma.svg" },
 ];
