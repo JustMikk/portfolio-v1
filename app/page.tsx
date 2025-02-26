@@ -6,6 +6,7 @@ import { HeaderCard } from "@/components/ui/HeaderCard";
 import CursorFollower from "@/components/CursorFollower";
 import IntroSection from "@/components/sections/IntroSection";
 import TechStackSection from "@/components/sections/TechStackSection";
+import ProjectsSection from "@/components/sections/ProjectsSection";
 
 type Props = {};
 
@@ -28,6 +29,7 @@ export default function page({}: Props) {
               <div className="flex flex-col gap-3">
                 <IntroSection />
                 <TechStackSection />
+                <ProjectsSection />
               </div>
             </div>
           </div>
