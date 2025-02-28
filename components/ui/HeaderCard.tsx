@@ -7,6 +7,8 @@ import { DynamicIcon } from "lucide-react/dynamic";
 import { ThemeToggle } from "./ThemeToggle";
 import SocialLinks from "./SocialLinks";
 import { Button } from "./button";
+import { FlipWords } from "./flip-words";
+import { titles } from "@/lib/constants";
 
 export function HeaderCard() {
   return (
@@ -28,7 +30,10 @@ export function HeaderCard() {
         </CardItem>
         <CardItem className=" w-full flex flex-col items-center justify-center gap-2">
           <h1 className="mt-16 text-2xl ">Mikiyas Hailegebreal</h1>
-          <h2 className="text-xl"> Frontend Developer</h2>
+          <FlipWords
+            className="font-medium text-xl pt-[2px] px-3"
+            words={titles}
+          />
         </CardItem>
         <CardItem className="w-full mt-5">
           <SocialLinks />

@@ -75,6 +75,9 @@ body {
   body {
     @apply bg-background text-foreground;
   }
+  html {
+    scroll-behavior: smooth;
+  }
   .cursor-follower {
     position: fixed;
     width: 2rem;

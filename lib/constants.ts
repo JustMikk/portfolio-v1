@@ -25,9 +25,15 @@ import {
 export const NavLinks = [
   {
     name: "About",
-    href: "#about",
+    href: "#",
     icon: BsPerson,
     current: true,
+  },
+  {
+    name: "Skills",
+    href: "#skills",
+    icon: BsTools,
+    current: false,
   },
   {
     name: "Works",
@@ -45,12 +51,6 @@ export const NavLinks = [
     name: "Resume",
     href: "#resume",
     icon: FileText,
-    current: false,
-  },
-  {
-    name: "Skills",
-    href: "#skills",
-    icon: BsTools,
     current: false,
   },
   {
@@ -88,4 +88,11 @@ export const TechStack = [
   { id: 10, name: "React Query", image: "/images/ReactQuery.svg" },
   { id: 11, name: "Figma", image: "/images/Figma.svg" },
   { id: 12, name: "Prisma", image: "/images/Prisma.svg" },
+];
+
+export const titles = [
+  "Fullstack Developer",
+  "Product Designer",
+  "Software Engineer",
+  "Problem Solver",
 ];

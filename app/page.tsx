@@ -14,7 +14,7 @@ export default function page({}: Props) {
   return (
     <>
       <div className="relative min-h-screen bg-violet-100 bg-no-repeat bg-cover bg-center  dark:bg-[url('/images/bg.gif')]">
-        <div className="absolute inset-0 dark:bg-black opacity-100 dark:opacity-70"></div>
+        <div className="absolute inset-0 dark:bg-neutral-900 opacity-100 dark:opacity-60"></div>
         <div className="relative py-12 max-w-[1440px] w-full mx-auto">
           <div className="flex flex-col lg:flex-row justify-center gap-12 w-full mx-auto">
             <div className="w-auto ">
@@ -26,10 +26,23 @@ export default function page({}: Props) {
               <div className="hidden lg:flex sticky top-0 z-20 ">
                 <Navbar />
               </div>
+
+              {/* Intro Section */}
+
               <div className="flex flex-col gap-3">
                 <IntroSection />
-                <TechStackSection />
-                <ProjectsSection />
+
+                {/* Skills Section */}
+
+                <div id="skills">
+                  <TechStackSection />
+                </div>
+
+                {/* Projects Section */}
+
+                <div id="works">
+                  <ProjectsSection />
+                </div>
               </div>
             </div>
           </div>

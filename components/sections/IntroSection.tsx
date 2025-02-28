@@ -1,7 +1,9 @@
 import React from "react";
 import Section from "../layouts/Section";
 import { AnimatedTooltip } from "../ui/animated-tooltip";
-import { TechStack } from "@/lib/constants";
+import { TechStack, titles } from "@/lib/constants";
+import RotatingText from "@/RotatingText/RotatingText";
+import { FlipWords } from "../ui/flip-words";
 
 type Props = {};
 
@@ -12,7 +14,13 @@ export default function IntroSection({}: Props) {
         {/* Header Text */}
 
         <div className="mb-12">
-          <h3 className="text-2xl mb-6">Hello, I'm a Fullstack Developer</h3>
+          <div className="flex items-start">
+            <h3 className="text-2xl font mb-6">Hello, I'm a </h3>
+            <FlipWords
+              className="font-medium text-2xl pt-[2px] px-3"
+              words={titles}
+            />
+          </div>{" "}
           <h1 className="text-5xl/normal font-normal">
             A skilled full-stack web and mobile-app
             <span className="bg-violet-800 rounded-full p-3 py-0 font-medium text-center mx-3 -rotate-45 text-black">
