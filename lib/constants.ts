@@ -96,3 +96,10 @@ export const titles = [
   "Software Engineer",
   "Problem Solver",
 ];
+
+export const projects = [
+  {
+    title: "WindBnB",
+    description: "A clone of Airbnb",
+  },
+];

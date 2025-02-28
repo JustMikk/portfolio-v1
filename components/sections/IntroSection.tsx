@@ -2,7 +2,7 @@ import React from "react";
 import Section from "../layouts/Section";
 import { AnimatedTooltip } from "../ui/animated-tooltip";
 import { TechStack, titles } from "@/lib/constants";
-import RotatingText from "@/RotatingText/RotatingText";
+import RotatingText from "@/components/ui/RotatingText";
 import { FlipWords } from "../ui/flip-words";
 
 type Props = {};
