@@ -54,7 +54,7 @@ export default function page({}: Props) {
 
                 {/* Testimonial Section */}
 
-                <div id="">
+                <div id="testimonials">
                   <TestimonialSection />
                 </div>
               </div>

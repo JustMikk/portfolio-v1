@@ -8,6 +8,7 @@ import {
   PenTool,
   ServerCogIcon,
   Settings,
+  Star,
   TabletSmartphone,
 } from "lucide-react";
 import {
@@ -53,9 +54,9 @@ export const NavLinks = [
     current: false,
   },
   {
-    name: "Resume",
-    href: "#resume",
-    icon: FileText,
+    name: "Testimonials",
+    href: "#testimonials",
+    icon: Star,
     current: false,
   },
   {
@@ -164,5 +165,26 @@ export const services = [
     description:
       "Skilled in improving in search engine rankings and visibility.",
     icon: ChartNoAxesCombined,
+  },
+];
+
+export const testimonials = [
+  {
+    quote:
+      "I had an amazing time working with Mikiyas, and I am genuinely impressed by his expertise and professionalism. Throughout the entire process, he delivered outstanding work, carefully managing every detail. I highly recommend working with him.",
+    name: "Nejmiah",
+    title: "A business owner",
+  },
+  {
+    quote:
+      "Mikiyas is a skilled, reliable frontend developer. He expertly translates UI designs into pixel-perfect code, proactively solves problems, and delivers exceptional work. Highly recommended.",
+    name: "Henok Assefa",
+    title: "UI/UX Designer",
+  },
+  {
+    quote:
+      "Mikiyas is a fantastic frontend developer. His clean, efficient, and well-documented code seamlessly integrates with the backend. He proactively improves architecture and is a true collaborator. Highly recommended.",
+    name: "Matthias Mulugeta",
+    title: "Backend Developer",
   },
 ];

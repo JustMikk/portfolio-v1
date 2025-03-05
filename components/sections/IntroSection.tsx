@@ -2,7 +2,6 @@ import React from "react";
 import Section from "../layouts/Section";
 import { AnimatedTooltip } from "../ui/animated-tooltip";
 import { TechStack, titles } from "@/lib/constants";
-import RotatingText from "@/components/ui/RotatingText";
 import { FlipWords } from "../ui/flip-words";
 
 type Props = {};
@@ -21,8 +20,8 @@ export default function IntroSection({}: Props) {
               words={titles}
             />
           </div>{" "}
-          <h1 className="text-5xl/normal font-normal">
-            A skilled full-stack web and mobile-app
+          <h1 className="text-5xl/normal font-normal break-words">
+            A skilled full stack web and mobile app
             <span className="bg-violet-800 rounded-full p-3 py-0 font-medium text-center mx-3 -rotate-45 text-black">
               developer
             </span>
