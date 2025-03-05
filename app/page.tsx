@@ -7,6 +7,7 @@ import CursorFollower from "@/components/CursorFollower";
 import IntroSection from "@/components/sections/IntroSection";
 import TechStackSection from "@/components/sections/TechStackSection";
 import ProjectsSection from "@/components/sections/ProjectsSection";
+import ServicesSection from "@/components/sections/ServicesSection";
 
 type Props = {};
 
@@ -42,6 +43,12 @@ export default function page({}: Props) {
 
                 <div id="works">
                   <ProjectsSection />
+                </div>
+
+                {/* Services Section */}
+
+                <div id="services">
+                  <ServicesSection />
                 </div>
               </div>
             </div>

@@ -103,23 +103,27 @@ export const projects = [
     title: "WindBnB",
     description: "A clone of Airbnb",
     images: ["/images/windbnb.png"],
+    link: "https://wind-bnb-five.vercel.app/",
   },
   {
     id: 2,
     title: "Cook Book",
     description: "A place to share your recipes",
     images: ["/images/cook-book.png"],
+    link: "https://github.com/JustMikk/Cook_Book",
   },
   {
     id: 3,
     title: "Addis Path",
     description: "A trailer rental business based on Atlanta",
     images: ["/images/addis-path.png"],
+    link: "https://addispathtrailers.com/",
   },
   {
     id: 4,
     title: "Grace Church",
     description: "A dashboard to manage church activities",
     images: ["/images/church-dashboard.png"],
+    link: "https://github.com/Awura-Projects1/Grace_Church",
   },
 ];

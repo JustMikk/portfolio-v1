@@ -1,13 +1,23 @@
-import { Card, CardFooter, Image, Button } from "@heroui/react";
+import { Card, CardFooter, Image } from "@heroui/react";
 import { FaExternalLinkAlt } from "react-icons/fa";
+import { Button } from "./button";
+import Link from "next/link";
 
 type CardProps = {
+  id: number;
   title: string;
   description: string;
   images: string[];
+  link: string;
 };
 
-export default function ProjectCard({ title, description, images }: CardProps) {
+export default function ProjectCard({
+  id,
+  title,
+  description,
+  images,
+  link,
+}: CardProps) {
   return (
     <Card className="border-none hover:scale-105 transition-all ease-in-out duration-100 group">
       <Image
@@ -21,15 +31,15 @@ export default function ProjectCard({ title, description, images }: CardProps) {
           <p className="text-lg">{title}</p>
           <p className="text-md text-white/80">{description}</p>
         </div>
-        <Button
-          className="text-tiny text-white bg-black/20"
+        <Link
+          target="_blank"
+          rel="noopener noreferrer"
+          href={link}
+          className="text-tiny text-white bg-black/20 hover:bg-white/20 "
           color="default"
-          radius="lg"
-          size="sm"
-          variant="flat"
         >
           <FaExternalLinkAlt />
-        </Button>
+        </Link>
       </CardFooter>
     </Card>
   );
