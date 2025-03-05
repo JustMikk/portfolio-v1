@@ -8,6 +8,7 @@ import IntroSection from "@/components/sections/IntroSection";
 import TechStackSection from "@/components/sections/TechStackSection";
 import ProjectsSection from "@/components/sections/ProjectsSection";
 import ServicesSection from "@/components/sections/ServicesSection";
+import TestimonialSection from "@/components/sections/TestimonialSection";
 
 type Props = {};
 
@@ -30,7 +31,7 @@ export default function page({}: Props) {
 
               {/* Intro Section */}
 
-              <div className="flex flex-col gap-3">
+              <div className="flex flex-col gap-9">
                 <IntroSection />
 
                 {/* Skills Section */}
@@ -49,6 +50,12 @@ export default function page({}: Props) {
 
                 <div id="services">
                   <ServicesSection />
+                </div>
+
+                {/* Testimonial Section */}
+
+                <div id="">
+                  <TestimonialSection />
                 </div>
               </div>
             </div>
