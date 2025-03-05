@@ -105,6 +105,7 @@ export const projects = [
     images: ["/images/windbnb.png"],
     link: "https://wind-bnb-five.vercel.app/",
   },
+
   {
     id: 2,
     title: "Cook Book",

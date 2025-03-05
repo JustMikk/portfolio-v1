@@ -9,7 +9,6 @@ export default function ProjectCards({}: Props) {
     <div className="grid grid-cols-1 lg:grid-cols-2 gap-9">
       {projects.map((project) => (
         <ProjectCard
-          id={project.id}
           key={project.id}
           title={project.title}
           description={project.description}

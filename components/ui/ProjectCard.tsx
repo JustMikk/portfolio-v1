@@ -1,10 +1,7 @@
-import { Card, CardFooter, Image } from "@heroui/react";
 import { FaExternalLinkAlt } from "react-icons/fa";
-import { Button } from "./button";
 import Link from "next/link";
 
 type CardProps = {
-  id: number;
   title: string;
   description: string;
   images: string[];
@@ -12,35 +9,35 @@ type CardProps = {
 };
 
 export default function ProjectCard({
-  id,
   title,
   description,
   images,
   link,
 }: CardProps) {
   return (
-    <Card className="border-none hover:scale-105 transition-all ease-in-out duration-100 group">
-      <Image
-        alt={title}
-        className="object-cover  h-full w-full"
-        height={350}
+    <div className="relative group rounded-xl overflow-hidden shadow-lg border border-neutral-800 hover:shadow-xl transition-shadow duration-300">
+      {/* Image */}
+      <img
         src={images[0]}
+        alt={title}
+        className="w-full h-72 object-cover group-hover:scale-105 transition-transform duration-300"
       />
-      <CardFooter className="hidden group-hover:flex justify-between bg-black/60 border-white/40 border-1 overflow-hidden py-1 absolute before:rounded-xl rounded-large bottom-1 w-[calc(100%_-_8px)] shadow-small ml-1 z-10 ">
-        <div>
-          <p className="text-lg">{title}</p>
-          <p className="text-md text-white/80">{description}</p>
-        </div>
-        <Link
-          target="_blank"
-          rel="noopener noreferrer"
-          href={link}
-          className="text-tiny text-white bg-black/20 hover:bg-white/20 "
-          color="default"
-        >
-          <FaExternalLinkAlt />
+
+      {/* Overlay */}
+      <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+
+      {/* Content */}
+      <div className="absolute bottom-0 left-0 w-full p-4 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+        <h3 className="text-lg font-semibold text-white">{title}</h3>
+        <p className="text-sm text-gray-300 mt-1">{description}</p>
+
+        {/* External Link */}
+        <Link href={link} target="_blank">
+          <button className="mt-3 flex items-center gap-2 px-4 py-2 text-white border border-white rounded-lg hover:bg-white hover:text-black transition-colors duration-300">
+            View Project <FaExternalLinkAlt />
+          </button>
         </Link>
-      </CardFooter>
-    </Card>
+      </div>
+    </div>
   );
 }
