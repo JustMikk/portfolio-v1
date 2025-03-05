@@ -99,7 +99,27 @@ export const titles = [
 
 export const projects = [
   {
+    id: 1,
     title: "WindBnB",
     description: "A clone of Airbnb",
+    images: ["/images/windbnb.png"],
+  },
+  {
+    id: 2,
+    title: "Cook Book",
+    description: "A place to share your recipes",
+    images: ["/images/cook-book.png"],
+  },
+  {
+    id: 3,
+    title: "Addis Path",
+    description: "A trailer rental business based on Atlanta",
+    images: ["/images/addis-path.png"],
+  },
+  {
+    id: 4,
+    title: "Grace Church",
+    description: "A dashboard to manage church activities",
+    images: ["/images/church-dashboard.png"],
   },
 ];
