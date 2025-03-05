@@ -1,9 +1,14 @@
 import {
   BookOpen,
   Briefcase,
+  ChartNoAxesCombined,
+  Code2,
   FileText,
   MessageCircle,
+  PenTool,
+  ServerCogIcon,
   Settings,
+  TabletSmartphone,
 } from "lucide-react";
 import {
   BsGithub,
@@ -126,5 +131,38 @@ export const projects = [
     description: "A dashboard to manage church activities",
     images: ["/images/church-dashboard.png"],
     link: "https://github.com/Awura-Projects1/Grace_Church",
+  },
+];
+
+export const services = [
+  {
+    title: "Frontend Development",
+    description:
+      "Expert in building dynamic and scalable web applications with high performance using Next JS, React JS and Tailwind CSS.",
+    icon: Code2,
+  },
+  {
+    title: "Backend Development",
+    description:
+      "Create robust and efficient server-side applications with Express, Hono, Postgres and Prisma.",
+    icon: ServerCogIcon,
+  },
+  {
+    title: "Mobile App Development",
+    description:
+      "Experienced in developing user-friendly and responsive mobile apps use React Native and Expo.",
+    icon: TabletSmartphone,
+  },
+  {
+    title: "UI/UX Design",
+    description:
+      "Proficent in crafting stunning product designs and experiences.",
+    icon: PenTool,
+  },
+  {
+    title: "Search Engine Optimization",
+    description:
+      "Skilled in improving in search engine rankings and visibility.",
+    icon: ChartNoAxesCombined,
   },
 ];
