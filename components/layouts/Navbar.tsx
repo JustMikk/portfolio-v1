@@ -7,7 +7,7 @@ type Props = {};
 
 export default function Navbar({}: Props) {
   return (
-    <div className="container h-11 flex sticky items-center gap-4 p-6 pt-12">
+    <div className="container h-11 flex sticky items-center gap-4 p-6 pt-12 z-50">
       {NavLinks.map((link) => (
         <Navlink
           key={link.name}

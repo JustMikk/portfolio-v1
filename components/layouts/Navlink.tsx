@@ -10,7 +10,7 @@ type Props = {
 
 export default function Navlink({ title, link, icon: Icon }: Props) {
   return (
-    <div className="group hover:text-violet-600 dark:border-neutral-800 border-neutral-300 border bg-transparent backdrop-blur rounded-2xl flex justify-center items-center transition">
+    <div className="group hover:text-violet-600 dark:border-neutral-800 border-neutral-300 border bg-transparent backdrop-blur rounded-2xl flex justify-center items-center transition z-50">
       <Link href={link} className="w-full">
         <div className="p-1 lg:p-3 px-5 rounded-sm flex justify-center items-center">
           <Icon

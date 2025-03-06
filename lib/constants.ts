@@ -20,13 +20,6 @@ import {
   BsTools,
   BsTwitterX,
 } from "react-icons/bs";
-import {
-  SiFigma,
-  SiNextdotjs,
-  SiNodedotjs,
-  SiTailwindcss,
-  SiTypescript,
-} from "react-icons/si";
 
 export const NavLinks = [
   {
@@ -59,12 +52,7 @@ export const NavLinks = [
     icon: Star,
     current: false,
   },
-  {
-    name: "Blog",
-    href: "#blog",
-    icon: BookOpen,
-    current: false,
-  },
+
   {
     name: "Contact",
     href: "#contact",

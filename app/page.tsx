@@ -9,6 +9,7 @@ import TechStackSection from "@/components/sections/TechStackSection";
 import ProjectsSection from "@/components/sections/ProjectsSection";
 import ServicesSection from "@/components/sections/ServicesSection";
 import TestimonialSection from "@/components/sections/TestimonialSection";
+import ContactSection from "@/components/sections/ContactSection";
 
 type Props = {};
 
@@ -56,6 +57,12 @@ export default function page({}: Props) {
 
                 <div id="testimonials">
                   <TestimonialSection />
+                </div>
+
+                {/* Contact Section */}
+
+                <div id="contact">
+                  <ContactSection />
                 </div>
               </div>
             </div>
