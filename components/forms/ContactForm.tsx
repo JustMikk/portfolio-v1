@@ -118,7 +118,7 @@ export function ContactForm() {
                       <FormLabel>First Name *</FormLabel>
                       <FormControl>
                         <Input
-                          className="bg-violet-50 py-6 placeholder:text-neutral-400 text-neutral-800 font-medium text-lg border-violet-500/30 focus:border-violet-500 focus:ring focus:ring-violet-500 focus:ring-opacity-50"
+                          className="bg-violet-50 py-6 placeholder:text-neutral-400 text-neutral-800 border-violet-500/30 focus:border-violet-500 focus:ring focus:ring-violet-500 focus:ring-opacity-50"
                           placeholder="full name here"
                           {...field}
                         />
@@ -136,7 +136,7 @@ export function ContactForm() {
                       <FormLabel>Email *</FormLabel>
                       <FormControl>
                         <Input
-                          className="bg-violet-50 py-6 placeholder:text-neutral-400 text-neutral-800 font-medium text-lg border-violet-500/30 focus:border-violet-500 focus:ring focus:ring-violet-500 focus:ring-opacity-50"
+                          className="bg-violet-50 py-6 placeholder:text-neutral-400 text-neutral-800 border-violet-500/30 focus:border-violet-500 focus:ring focus:ring-violet-500 focus:ring-opacity-50"
                           placeholder="email here"
                           {...field}
                         />
@@ -155,7 +155,7 @@ export function ContactForm() {
                       <FormControl>
                         <Textarea
                           placeholder="What can I help you with?"
-                          className="min-h-[150px] bg-violet-50 placeholder:text-neutral-400 text-neutral-800 font-medium text-lg"
+                          className="min-h-[150px] bg-violet-50 placeholder:text-neutral-400 text-neutral-800"
                           {...field}
                         />
                       </FormControl>
@@ -167,7 +167,7 @@ export function ContactForm() {
                 <Button
                   disabled={form.formState.isSubmitting}
                   type="submit"
-                  className="bg-violet-500 hover:bg-violet-600"
+                  className=""
                 >
                   {form.formState.isSubmitting ? "SENDING..." : "SEND MESSAGE"}
                 </Button>

@@ -39,10 +39,7 @@ export function HeaderCard() {
           <SocialLinks />
         </CardItem>
         <CardItem className="w-full mt-8">
-          <Button
-            size="lg"
-            className="w-full bg-violet-800 text-gray-200 hover:text-violet-300 hover:bg-transparent hover:border hover:border-violet-400"
-          >
+          <Button size="lg" className="w-full">
             Download CV
           </Button>
         </CardItem>
