@@ -27,6 +27,9 @@ import { Textarea } from "@/components/ui/textarea";
 import axios from "axios";
 import { toast } from "react-hot-toast";
 import emailjs from "@emailjs/browser";
+import Link from "next/link";
+import { FaFacebook } from "react-icons/fa";
+import SocialLinks from "../ui/SocialLinks";
 
 const formSchema = z.object({
   fullName: z.string().min(2, "Name must be at least 2 characters"),
@@ -67,10 +70,10 @@ export function ContactForm() {
       };
 
       const result = await emailjs.send(
-        "service_4d38grk",
-        "template_qko39cm",
+        "service_lu24bin",
+        "template_pqcg3rf",
         templateParams,
-        "fPkNV9-NpgxFlm8L_"
+        "fxhjjVfRrTUVFjhTH"
       );
 
       if (result.status === 200) {
@@ -92,13 +95,13 @@ export function ContactForm() {
   }
 
   return (
-    <section className="py-12 md:py-32 bg-white ">
+    <section className="py-12 md:py-32 bg-transparent ">
       <div className=" mx-auto px-4 md:px-12 lg:px-16 lg:max-w-[1440px] p-6">
         <div className="grid md:grid-cols-2 gap-8">
           <div>
             <div className="mb-8">
               <h2 className="text-3xl font-bold text-gray-900 mt-2">
-                Get in <span className="text-blue-600">touch</span>
+                Get in <span className="text-violet-600">touch</span>
               </h2>
             </div>
 
@@ -107,45 +110,41 @@ export function ContactForm() {
                 onSubmit={form.handleSubmit(onSubmit)}
                 className="space-y-6"
               >
-                <div className="grid md:grid-cols-2 gap-6">
-                  <FormField
-                    control={form.control}
-                    name="fullName"
-                    render={({ field }) => (
-                      <FormItem>
-                        <FormLabel>First Name *</FormLabel>
-                        <FormControl>
-                          <Input
-                            className="bg-blue-50 border-blue-500/30 focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50"
-                            placeholder="first name here"
-                            {...field}
-                          />
-                        </FormControl>
-                        <FormMessage />
-                      </FormItem>
-                    )}
-                  />
-                </div>
+                <FormField
+                  control={form.control}
+                  name="fullName"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel>First Name *</FormLabel>
+                      <FormControl>
+                        <Input
+                          className="bg-violet-50 py-6 placeholder:text-neutral-400 text-neutral-800 font-medium text-lg border-violet-500/30 focus:border-violet-500 focus:ring focus:ring-violet-500 focus:ring-opacity-50"
+                          placeholder="full name here"
+                          {...field}
+                        />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
 
-                <div className="grid md:grid-cols-2 gap-6">
-                  <FormField
-                    control={form.control}
-                    name="email"
-                    render={({ field }) => (
-                      <FormItem>
-                        <FormLabel>Email *</FormLabel>
-                        <FormControl>
-                          <Input
-                            className="bg-blue-50 border-blue-500/30 focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50"
-                            placeholder="email here"
-                            {...field}
-                          />
-                        </FormControl>
-                        <FormMessage />
-                      </FormItem>
-                    )}
-                  />
-                </div>
+                <FormField
+                  control={form.control}
+                  name="email"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel>Email *</FormLabel>
+                      <FormControl>
+                        <Input
+                          className="bg-violet-50 py-6 placeholder:text-neutral-400 text-neutral-800 font-medium text-lg border-violet-500/30 focus:border-violet-500 focus:ring focus:ring-violet-500 focus:ring-opacity-50"
+                          placeholder="email here"
+                          {...field}
+                        />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
 
                 <FormField
                   control={form.control}
@@ -155,8 +154,8 @@ export function ContactForm() {
                       <FormLabel>Message *</FormLabel>
                       <FormControl>
                         <Textarea
-                          placeholder="Tell us a few words"
-                          className="min-h-[150px] bg-blue-50"
+                          placeholder="What can I help you with?"
+                          className="min-h-[150px] bg-violet-50 placeholder:text-neutral-400 text-neutral-800 font-medium text-lg"
                           {...field}
                         />
                       </FormControl>
@@ -168,7 +167,7 @@ export function ContactForm() {
                 <Button
                   disabled={form.formState.isSubmitting}
                   type="submit"
-                  className="bg-blue-500 hover:bg-blue-600"
+                  className="bg-violet-500 hover:bg-violet-600"
                 >
                   {form.formState.isSubmitting ? "SENDING..." : "SEND MESSAGE"}
                 </Button>
@@ -188,72 +187,45 @@ export function ContactForm() {
             {/* Content */}
             <CardContent className="relative p-8 z-10">
               <div className="mb-8">
-                <h2 className="text-3xl font-bold mb-2">Our contact detail</h2>
+                <h2 className="text-3xl font-bold mb-2">My contact detail</h2>
                 <p className="text-gray-300">
-                  Need any consultations contact with us
+                  Need any software solution? Contact me.
                 </p>
               </div>
 
               <div className="space-y-8">
                 <div className="space-y-4">
                   <div className="flex items-start gap-4">
-                    <Phone className="w-6 h-6 text-blue-600 mt-1" />
+                    <Phone className="w-6 h-6 text-violet-600 mt-1" />
                     <div>
                       <h3 className="font-bold mb-2">Phone Number</h3>
-                      <p className="text-gray-300">+1 (414) 595-0096</p>
-                      {/* <p className="text-gray-300">(+44)123 456 789</p> */}
+                      <p className="text-gray-300">(+251) 967 991 617</p>
                     </div>
                   </div>
 
                   <div className="flex items-start gap-4">
-                    <Mail className="w-6 h-6 text-blue-600 mt-1" />
+                    <Mail className="w-6 h-6 text-violet-600 mt-1" />
                     <div>
                       <h3 className="font-bold mb-2">Email Address</h3>
-                      <p className="text-gray-300">
-                        info@addispathtrailers.com
-                      </p>
-                      {/* <p className="text-gray-300">contact@addisPath.com</p> */}
+                      <p className="text-gray-300">mikiyasbutu@gmail.com.com</p>
                     </div>
                   </div>
 
                   <div className="flex items-start gap-4">
-                    <MapPin className="w-6 h-6 text-blue-600 mt-1" />
+                    <MapPin className="w-6 h-6 text-violet-600 mt-1" />
                     <div>
                       <h3 className="font-bold mb-2">Location</h3>
                       <p className="text-gray-300">
-                        290 Jackson Place NW,
+                        Addis Ababa,
                         <br />
-                        Lilburn, GA 30047
+                        Ethiopia
                       </p>
                     </div>
                   </div>
                 </div>
 
-                <div className="flex gap-4 pt-4">
-                  <a
-                    href="#"
-                    className="p-2 bg-white/10 rounded-full hover:bg-blue-500 transition-colors"
-                  >
-                    <Facebook className="w-5 h-5" />
-                  </a>
-                  <a
-                    href="#"
-                    className="p-2 bg-white/10 rounded-full hover:bg-blue-500 transition-colors"
-                  >
-                    <Twitter className="w-5 h-5" />
-                  </a>
-                  <a
-                    href="#"
-                    className="p-2 bg-white/10 rounded-full hover:bg-blue-500 transition-colors"
-                  >
-                    <Youtube className="w-5 h-5" />
-                  </a>
-                  <a
-                    href="#"
-                    className="p-2 bg-white/10 rounded-full hover:bg-blue-500 transition-colors"
-                  >
-                    <Linkedin className="w-5 h-5" />
-                  </a>
+                <div className="px-3 text-xl flex justify-start">
+                  <SocialLinks />
                 </div>
               </div>
             </CardContent>

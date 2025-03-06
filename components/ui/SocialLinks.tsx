@@ -23,7 +23,7 @@ export default function SocialLinks({}: Props) {
           <IconComponent
             onClick={() => router.push(link)}
             key={key}
-            className="text-sm hover:text-violet-500 cursor-pointer"
+            className="hover:text-violet-500 cursor-pointer"
           />
         </div>
       ))}
