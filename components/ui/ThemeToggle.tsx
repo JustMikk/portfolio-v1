@@ -20,7 +20,7 @@ export function ThemeToggle() {
 
   return (
     <div
-      className="inline-flex items-center justify-center whitespace-nowrap text-md p-1 hover:bg-primary/10 rounded-xl cursor-pointer"
+      className="inline-flex bg-violet-200 dark:bg-neutral-800 p-3 items-center justify-center whitespace-nowrap text-md rounded-xl cursor-pointer"
       onClick={() => setTheme(theme === "light" ? "dark" : "light")}
     >
       {theme === "light" ? (
