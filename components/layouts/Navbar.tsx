@@ -5,12 +5,14 @@ import { ThemeToggle } from "../ui/ThemeToggle";
 import { Button } from "../ui/button";
 import { MdArrowRightAlt } from "react-icons/md";
 import { ArrowRight } from "lucide-react";
+import Image from "next/image";
 
 type Props = {};
 
 export default function Navbar({}: Props) {
   return (
     <div className="container h-11 flex sticky items-center gap-12 p-6 pt-12 z-50">
+      <Image src="/images/logo.png" width={60} height={60} alt="logo" />
       <div className="flex items-center gap-4 p-6">
         {NavLinks.map((link) => (
           <Navlink

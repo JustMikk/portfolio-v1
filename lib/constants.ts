@@ -62,10 +62,30 @@ export const NavLinks = [
 ];
 
 export const SocialLinks = [
-  { component: BsGithub, key: "github", link: "", name: "Github" },
-  { component: BsLinkedin, key: "linkedin", link: "", name: "Linkedin" },
-  { component: BsTwitterX, key: "twitter", link: "", name: "TwitterX" },
-  { component: BsTelegram, key: "telegram", link: "", name: "Telegram" },
+  {
+    component: BsGithub,
+    key: "github",
+    link: "https://github.com/JustMikk",
+    name: "Github",
+  },
+  {
+    component: BsLinkedin,
+    key: "linkedin",
+    link: "https://www.linkedin.com/in/mikiyas-hailegebreal-019487350",
+    name: "Linkedin",
+  },
+  {
+    component: BsTwitterX,
+    key: "twitter",
+    link: "https://x.com/JustMik22?t=PF3wCVH-ab1DgrWrz0unJw&s=09",
+    name: "TwitterX",
+  },
+  {
+    component: BsTelegram,
+    key: "telegram",
+    link: "https://t.me/Miki_yas",
+    name: "Telegram",
+  },
   // { component: BsInstagram, key: "instagram", link: "", name: "Instagram" },
 ];
 
