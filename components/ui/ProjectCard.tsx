@@ -21,6 +21,9 @@ export default function ProjectCard({
       <Image
         src={images[0]}
         alt={title}
+        width={400}
+        height={300}
+        priority
         className="w-full h-72 object-cover group-hover:scale-105 transition-transform duration-300"
       />
 

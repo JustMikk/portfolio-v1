@@ -23,6 +23,7 @@ export function HeaderCard() {
             src="/images/profile.jpg"
             height="1000"
             width="700"
+            priority
             className="h-auto w-5/6 m-auto object-cover rounded-2xl group-hover/card:shadow-xl"
             alt="profile"
           />
