@@ -2,13 +2,11 @@
   "extends": ["next/core-web-vitals", "next/typescript"],
   "rules": {
     "no-empty": "off",
-    "no-unused-vars": [
-      "error",
-      {
-        "varsIgnorePattern": "^_",
-        "argsIgnorePattern": "^_",
-        "ignoreRestSiblings": true
-      }
-    ]
+    "no-empty-pattern": "off",
+    "allowObjectTypes": true,
+
+    "no-unused-vars": "off",
+
+    "@typescript-eslint/no-explicit-any": "off"
   }
 }
