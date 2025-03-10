@@ -1,7 +1,6 @@
 import React from "react";
 import Section from "../layouts/Section";
-import { AnimatedTooltip } from "../ui/animated-tooltip";
-import { TechStack, titles } from "@/lib/constants";
+import { titles } from "@/lib/constants";
 import { FlipWords } from "../ui/flip-words";
 
 type Props = {};

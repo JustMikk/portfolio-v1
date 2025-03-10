@@ -3,8 +3,6 @@
 import Image from "next/image";
 import React from "react";
 import { CardBody, CardContainer, CardItem } from "./3d-card";
-import { DynamicIcon } from "lucide-react/dynamic";
-import { ThemeToggle } from "./ThemeToggle";
 import SocialLinks from "./SocialLinks";
 import { Button } from "./button";
 import { FlipWords } from "./flip-words";

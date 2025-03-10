@@ -1,6 +1,4 @@
 import React from "react";
-import { NavLinks } from "../lib/constants";
-import Navlink from "@/components/layouts/Navlink";
 import Navbar from "@/components/layouts/Navbar";
 import { HeaderCard } from "@/components/ui/HeaderCard";
 import CursorFollower from "@/components/CursorFollower";

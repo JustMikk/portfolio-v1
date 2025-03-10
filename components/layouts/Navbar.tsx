@@ -3,7 +3,6 @@ import React from "react";
 import Navlink from "./Navlink";
 import { ThemeToggle } from "../ui/ThemeToggle";
 import { Button } from "../ui/button";
-import { MdArrowRightAlt } from "react-icons/md";
 import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
