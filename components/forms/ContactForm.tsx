@@ -174,21 +174,14 @@ export function ContactForm() {
               </form>
             </Form>
           </div>
-          <Card
-            className="relative text-white bg-black overflow-hidden"
-            style={{
-              backgroundImage: "url('/images/trailers-2.png')",
-              backgroundSize: "cover",
-              backgroundPosition: "center",
-            }}
-          >
-            <div className="absolute inset-0 bg-gray-900/80"></div>
+          <Card className="relative text-white dark:bg-black bg-gradient-to-t from-violet-300 to-violet-200 overflow-hidden">
+            <div className="absolute inset-0 dark:bg-gray-900/80 bg-gray-900/30"></div>
 
             {/* Content */}
-            <CardContent className="relative p-8 z-10">
+            <CardContent className="relative p-8 z-10 text-neutral-800">
               <div className="mb-8">
                 <h2 className="text-3xl font-bold mb-2">My contact detail</h2>
-                <p className="text-gray-300">
+                <p className="text-neutral-800 dark:text-gray-300">
                   Need any software solution? Contact me.
                 </p>
               </div>
@@ -196,26 +189,30 @@ export function ContactForm() {
               <div className="space-y-8">
                 <div className="space-y-4">
                   <div className="flex items-start gap-4">
-                    <Phone className="w-6 h-6 text-violet-600 mt-1" />
+                    <Phone className="w-6 h-6 text-neutral-800 dark:text-violet-600 mt-1" />
                     <div>
                       <h3 className="font-bold mb-2">Phone Number</h3>
-                      <p className="text-gray-300">(+251) 967 991 617</p>
+                      <p className="text-neutral-800 dark:text-gray-300">
+                        (+251) 967 991 617
+                      </p>
                     </div>
                   </div>
 
                   <div className="flex items-start gap-4">
-                    <Mail className="w-6 h-6 text-violet-600 mt-1" />
+                    <Mail className="w-6 h-6 text-neutral-800 dark:text-violet-600 mt-1" />
                     <div>
                       <h3 className="font-bold mb-2">Email Address</h3>
-                      <p className="text-gray-300">mikiyasbutu@gmail.com.com</p>
+                      <p className="text-neutral-800 dark:text-gray-300">
+                        mikiyasbutu@gmail.com.com
+                      </p>
                     </div>
                   </div>
 
                   <div className="flex items-start gap-4">
-                    <MapPin className="w-6 h-6 text-violet-600 mt-1" />
+                    <MapPin className="w-6 h-6 text-neutral-800 dark:text-violet-600 mt-1" />
                     <div>
                       <h3 className="font-bold mb-2">Location</h3>
-                      <p className="text-gray-300">
+                      <p className="text-neutral-800 dark:text-gray-300">
                         Addis Ababa,
                         <br />
                         Ethiopia
@@ -224,7 +221,7 @@ export function ContactForm() {
                   </div>
                 </div>
 
-                <div className="px-3 text-xl flex justify-start">
+                <div className="px-3 dark:text-white text-xl flex justify-start">
                   <SocialLinks />
                 </div>
               </div>

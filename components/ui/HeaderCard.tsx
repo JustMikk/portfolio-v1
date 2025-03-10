@@ -9,11 +9,12 @@ import SocialLinks from "./SocialLinks";
 import { Button } from "./button";
 import { FlipWords } from "./flip-words";
 import { titles } from "@/lib/constants";
+import Link from "next/link";
 
 export function HeaderCard() {
   return (
     <CardContainer className="inter-var">
-      <CardBody className="bg-transparent backdrop-blur relative group/card  dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:border-white/[0.2] border-neutral-700 w-auto sm:w-[24rem] h-auto sm:h-[39rem] rounded-3xl p-6 border  ">
+      <CardBody className="bg-transparent backdrop-blur relative group/card  dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:border-white/[0.2] border-neutral-400 w-full sm:w-[24rem] h-auto sm:h-[39rem] rounded-3xl p-6 border  ">
         <CardItem
           translateZ="100"
           rotateX={10}
@@ -39,9 +40,11 @@ export function HeaderCard() {
           <SocialLinks />
         </CardItem>
         <CardItem className="w-full mt-8">
-          <Button size="lg" className="w-full">
-            Download CV
-          </Button>
+          <Link href="/Mikiyas Hailegebreal Resume.pdf" download={true}>
+            <Button size="lg" className="w-full">
+              Download CV
+            </Button>
+          </Link>
         </CardItem>
       </CardBody>
     </CardContainer>

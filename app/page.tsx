@@ -33,7 +33,7 @@ export default function page({}: Props) {
 
               {/* Intro Section */}
 
-              <div className="flex flex-col gap-9">
+              <div className="flex flex-col items-center gap-9 overflow-hidden">
                 <IntroSection />
 
                 {/* Skills Section */}

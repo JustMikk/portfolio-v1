@@ -12,7 +12,7 @@ export default function TechStackSection({}: Props) {
       <Section>
         <SectionHeader>My Tech Stacks</SectionHeader>
         {/* Tech stack Tooltips */}
-        <div className="flex justify-center gap-24 flex-wrap mb-16">
+        <div className="flex justify-center gap-16 lg:gap-24 flex-wrap mb-16">
           <AnimatedTooltip items={TechStack} />
         </div>
       </Section>

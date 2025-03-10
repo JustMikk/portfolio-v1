@@ -9,7 +9,7 @@ export default function TestimonialSection({}: Props) {
   return (
     <>
       <SectionHeader>Testimonials</SectionHeader>
-      <InfiniteMovingCards speed="slow" items={testimonials} />
+      <InfiniteMovingCards speed="fast" items={testimonials} />
     </>
   );
 }

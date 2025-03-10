@@ -21,7 +21,7 @@ export default function SocialLinks({}: Props) {
           className="border rounded-full p-2 dark:border-neutral-700 border-neutral-400"
         >
           <IconComponent
-            onClick={() => router.push(link)}
+            onClick={() => window.open(link, "_blank")}
             key={key}
             className="hover:text-violet-500 cursor-pointer"
           />
