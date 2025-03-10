@@ -1,5 +1,6 @@
 import { FaExternalLinkAlt } from "react-icons/fa";
 import Link from "next/link";
+import Image from "next/image";
 
 type CardProps = {
   title: string;
@@ -17,7 +18,7 @@ export default function ProjectCard({
   return (
     <div className="relative group rounded-xl overflow-hidden shadow-lg border border-neutral-800 hover:shadow-xl transition-shadow duration-300">
       {/* Image */}
-      <img
+      <Image
         src={images[0]}
         alt={title}
         className="w-full h-72 object-cover group-hover:scale-105 transition-transform duration-300"
