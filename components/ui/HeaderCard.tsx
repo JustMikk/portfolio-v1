@@ -22,10 +22,11 @@ export function HeaderCard() {
           className="w-full mt-4"
         >
           <ExportedImage
-            src="/images/profile.jpg"
+            src="/images/profile.svg"
             height="1000"
             width="700"
             loading="lazy"
+            priority
             className="h-auto w-5/6 m-auto object-cover rounded-2xl group-hover/card:shadow-xl"
             alt="profile"
           />
