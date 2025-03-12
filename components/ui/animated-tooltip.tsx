@@ -8,6 +8,7 @@ import {
   useMotionValue,
   useSpring,
 } from "framer-motion";
+import ExportedImage from "next-image-export-optimizer";
 
 export const AnimatedTooltip = ({
   items,
@@ -75,7 +76,7 @@ export const AnimatedTooltip = ({
               </motion.div>
             )}
           </AnimatePresence>
-          <Image
+          <ExportedImage
             onMouseMove={handleMouseMove}
             height={100}
             width={100}

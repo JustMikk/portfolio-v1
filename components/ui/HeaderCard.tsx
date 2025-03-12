@@ -7,6 +7,8 @@ import SocialLinks from "./SocialLinks";
 import { Button } from "./button";
 import { FlipWords } from "./flip-words";
 import { titles } from "@/lib/constants";
+import ExportedImage from "next-image-export-optimizer";
+
 import Link from "next/link";
 
 export function HeaderCard() {
@@ -19,7 +21,7 @@ export function HeaderCard() {
           rotateZ={0}
           className="w-full mt-4"
         >
-          <Image
+          <ExportedImage
             src="/images/profile.jpg"
             height="1000"
             width="700"
