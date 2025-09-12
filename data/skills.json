@@ -1,0 +1,65 @@
+{
+  "categories": {
+    "Web Design": [
+      {
+        "name": "Figma",
+        "proficiency": "Advanced",
+        "description": "Design and prototyping tool for creating user interfaces"
+      },
+      {
+        "name": "HTML/CSS",
+        "proficiency": "Advanced",
+        "description": "Markup and styling languages for web development"
+      },
+      {
+        "name": "Webflow",
+        "proficiency": "Intermediate",
+        "description": "Visual web development platform"
+      },
+      {
+        "name": "Adobe Photoshop",
+        "proficiency": "Advanced",
+        "description": "Image editing and graphic design software"
+      }
+    ],
+    "Fullstack": [
+      {
+        "name": "JavaScript",
+        "proficiency": "Advanced",
+        "description": "Programming language for web development"
+      },
+      {
+        "name": "React",
+        "proficiency": "Advanced",
+        "description": "JavaScript library for building user interfaces"
+      },
+      {
+        "name": "Node.js",
+        "proficiency": "Intermediate",
+        "description": "JavaScript runtime for server-side development"
+      },
+      {
+        "name": "WordPress",
+        "proficiency": "Advanced",
+        "description": "Content management system and web development platform"
+      }
+    ],
+    "Graphics & Video": [
+      {
+        "name": "Adobe Premiere",
+        "proficiency": "Intermediate",
+        "description": "Professional video editing software"
+      },
+      {
+        "name": "After Effects",
+        "proficiency": "Intermediate",
+        "description": "Motion graphics and visual effects software"
+      },
+      {
+        "name": "Adobe Photoshop",
+        "proficiency": "Advanced",
+        "description": "Image editing and graphic design software"
+      }
+    ]
+  }
+}
