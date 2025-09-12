@@ -1,48 +1,22 @@
-"use client"
+"use client";
 
-import { useState } from "react"
-import Image from "next/image"
-import { Button } from "@/components/ui/button"
-import { Badge } from "@/components/ui/badge"
-import { ExternalLink } from "lucide-react"
-import { ProjectModal } from "./project-modal"
+import { useState } from "react";
+import Image from "next/image";
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
+import { ExternalLink } from "lucide-react";
+import { ProjectModal } from "./project-modal";
 
 interface ProjectCardProps {
-  title: string
-  description: string
-  year: string
-  category: string
-  image: string
-  tools: string[]
-  href?: string
-  github?: string
-  fullDescription?: string
-}
-
-const getToolIcon = (tool: string) => {
-  const toolIcons: { [key: string]: string } = {
-    React: "⚛️",
-    "Next.js": "▲",
-    TypeScript: "📘",
-    JavaScript: "🟨",
-    "Node.js": "🟢",
-    Python: "🐍",
-    HTML: "🌐",
-    CSS: "🎨",
-    Tailwind: "💨",
-    Figma: "🎨",
-    Photoshop: "🖼️",
-    "After Effects": "🎬",
-    "Premiere Pro": "🎥",
-    MongoDB: "🍃",
-    PostgreSQL: "🐘",
-    Firebase: "🔥",
-    Vercel: "▲",
-    AWS: "☁️",
-    Docker: "🐳",
-    Git: "📝",
-  }
-  return toolIcons[tool] || "🔧"
+  title: string;
+  description: string;
+  year: string;
+  category: string;
+  image: string;
+  tools: string[];
+  href?: string;
+  github?: string;
+  fullDescription?: string;
 }
 
 export function ProjectCard({
@@ -56,12 +30,12 @@ export function ProjectCard({
   github,
   fullDescription,
 }: ProjectCardProps) {
-  const [isHovered, setIsHovered] = useState(false)
-  const [isModalOpen, setIsModalOpen] = useState(false)
+  const [isHovered, setIsHovered] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   const handleViewDetails = () => {
-    setIsModalOpen(true)
-  }
+    setIsModalOpen(true);
+  };
 
   return (
     <>
@@ -70,7 +44,9 @@ export function ProjectCard({
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
         role="article"
-        aria-labelledby={`project-title-${title.replace(/\s+/g, "-").toLowerCase()}`}
+        aria-labelledby={`project-title-${title
+          .replace(/\s+/g, "-")
+          .toLowerCase()}`}
       >
         {/* Project Image */}
         <div className="relative aspect-[4/3] overflow-hidden">
@@ -93,7 +69,9 @@ export function ProjectCard({
                 onClick={handleViewDetails}
                 className="bg-purple-600 hover:bg-purple-700 text-white px-6 py-2 rounded-full transform transition-all duration-300 focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 focus:ring-offset-gray-900"
                 style={{
-                  transform: isHovered ? "translateY(0) scale(1)" : "translateY(20px) scale(0.9)",
+                  transform: isHovered
+                    ? "translateY(0) scale(1)"
+                    : "translateY(20px) scale(0.9)",
                   opacity: isHovered ? 1 : 0,
                 }}
                 aria-label={`View ${title} project details`}
@@ -125,25 +103,34 @@ export function ProjectCard({
             {title}
           </h3>
 
-          <p className="text-gray-400 text-sm leading-relaxed mb-4">{description}</p>
+          <p className="text-gray-400 text-sm leading-relaxed mb-4">
+            {description}
+          </p>
 
           <div className="flex items-center justify-between">
-            {/* Tools Icons */}
-            <div className="flex items-center gap-2">
-              {tools.slice(0, 4).map((tool, index) => (
-                <span key={tool} className="text-lg" title={tool} aria-label={tool}>
-                  {getToolIcon(tool)}
+            {/* 🔥 Tools as simple tags instead of icons */}
+            <div className="flex flex-wrap gap-2">
+              {tools.slice(0, 4).map((tool) => (
+                <span
+                  key={tool}
+                  className="text-xs px-3 py-1 rounded-full bg-purple-600/10 text-purple-400 border border-purple-500/30"
+                >
+                  {tool}
                 </span>
               ))}
-              {tools.length > 4 && <span className="text-gray-400 text-sm">+{tools.length - 4}</span>}
+              {tools.length > 4 && (
+                <span className="text-gray-400 text-sm">
+                  +{tools.length - 4}
+                </span>
+              )}
             </div>
 
             {/* Link Icon */}
             {href && (
               <button
                 onClick={(e) => {
-                  e.stopPropagation()
-                  window.open(href, "_blank")
+                  e.stopPropagation();
+                  window.open(href, "_blank");
                 }}
                 className="p-2 text-gray-400 hover:text-purple-400 transition-colors rounded-full hover:bg-purple-500/10"
                 aria-label={`Visit ${title} project`}
@@ -171,5 +158,5 @@ export function ProjectCard({
         }}
       />
     </>
-  )
+  );
 }

@@ -1,17 +1,18 @@
-"use client"
+"use client";
 
-import { useEffect, useState } from "react"
-import { Button } from "@/components/ui/button"
-import { ArrowRight, Coffee, Code, Palette } from "lucide-react"
+import { useEffect, useState } from "react";
+import { Button } from "@/components/ui/button";
+import { ArrowRight, Coffee, Code, Palette } from "lucide-react";
+import Image from "next/image";
 
 export function HeroSection() {
-  const [mounted, setMounted] = useState(false)
+  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
-    setMounted(true)
-  }, [])
+    setMounted(true);
+  }, []);
 
-  if (!mounted) return null
+  if (!mounted) return null;
 
   return (
     <section className="relative min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 pt-16 overflow-hidden">
@@ -29,12 +30,17 @@ export function HeroSection() {
           <div className="text-left">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-purple-500/10 border border-purple-500/20 mb-6 animate-fade-in">
               <Coffee className="w-4 h-4 text-purple-400" />
-              <span className="text-sm text-purple-300">Hey there! I'm Nathan</span>
+              <span className="text-sm text-purple-300">
+                Hey there! I'm Nathan
+              </span>
             </div>
 
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground mb-6 leading-tight">
               <span className="block animate-fade-in">I craft digital</span>
-              <span className="block animate-fade-in" style={{ animationDelay: "0.2s" }}>
+              <span
+                className="block animate-fade-in"
+                style={{ animationDelay: "0.2s" }}
+              >
                 experiences that
               </span>
               <span
@@ -49,11 +55,15 @@ export function HeroSection() {
               className="text-lg text-muted-foreground mb-8 leading-relaxed animate-fade-in"
               style={{ animationDelay: "0.6s" }}
             >
-              From sleek web designs to full-stack applications, I bring ideas to life with code, creativity, and a
-              passion for pixel-perfect details. Let's build something amazing together.
+              From sleek web designs to full-stack applications, I bring ideas
+              to life with code, creativity, and a passion for pixel-perfect
+              details. Let's build something amazing together.
             </p>
 
-            <div className="flex flex-wrap gap-3 mb-8 animate-fade-in" style={{ animationDelay: "0.7s" }}>
+            <div
+              className="flex flex-wrap gap-3 mb-8 animate-fade-in"
+              style={{ animationDelay: "0.7s" }}
+            >
               <div className="flex items-center gap-2 px-3 py-1 bg-purple-500/10 rounded-full border border-purple-500/20">
                 <Code className="w-4 h-4 text-purple-400" />
                 <span className="text-sm text-purple-300">Full-Stack Dev</span>
@@ -64,7 +74,10 @@ export function HeroSection() {
               </div>
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-4 animate-fade-in" style={{ animationDelay: "0.8s" }}>
+            <div
+              className="flex flex-col sm:flex-row gap-4 animate-fade-in"
+              style={{ animationDelay: "0.8s" }}
+            >
               <Button
                 size="lg"
                 className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-4 text-lg rounded-xl transition-all duration-300 hover:shadow-xl hover:shadow-purple-500/25 hover:scale-105"
@@ -84,16 +97,21 @@ export function HeroSection() {
             </div>
           </div>
 
-          <div className="relative animate-fade-in" style={{ animationDelay: "1s" }}>
+          <div
+            className="relative animate-fade-in"
+            style={{ animationDelay: "1s" }}
+          >
             <div className="relative w-full max-w-md mx-auto mb-8">
               <div className="relative w-48 h-48 mx-auto">
                 <div className="absolute inset-0 bg-gradient-to-r from-purple-500 to-indigo-500 rounded-full animate-pulse opacity-20"></div>
                 <div className="absolute inset-2 bg-gradient-to-r from-purple-600 to-indigo-600 rounded-full p-1">
-                  <img
-                    src="/professional-headshot-of-a-young-developer-with-fr.jpg"
+                  <Image
+                    src="/profile.jpg"
                     alt="Nathan - Full-Stack Developer and Designer"
                     className="w-full h-full rounded-full object-cover border-2 border-white/10"
                     loading="eager"
+                    width={192}
+                    height={192}
                   />
                 </div>
                 <div className="absolute -top-2 -right-2 w-6 h-6 bg-green-500 rounded-full border-2 border-black animate-pulse"></div>
@@ -117,7 +135,8 @@ export function HeroSection() {
                     <span className="text-blue-400">"Next.js"</span>],
                   </div>
                   <div className="text-gray-300 ml-4">
-                    passion: <span className="text-yellow-400">"Creating"</span>,
+                    passion: <span className="text-yellow-400">"Creating"</span>
+                    ,
                   </div>
                   <div className="text-gray-300 ml-4">
                     coffee: <span className="text-orange-400">true</span>
@@ -163,5 +182,5 @@ export function HeroSection() {
         </div>
       </div>
     </section>
-  )
+  );
 }

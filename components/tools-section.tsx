@@ -1,64 +1,70 @@
-"use client"
+"use client";
 
-import Image from "next/image"
+import Image from "next/image";
 
 const tools = [
   {
     name: "Figma",
-    description: "Design and prototyping tool for creating user interfaces and collaborative design workflows.",
-    icon: "/placeholder.svg?height=40&width=40&text=Figma",
+    description:
+      "Design and prototyping tool for creating user interfaces and collaborative design workflows.",
+    icon: "/figma.png?height=40&width=40&text=Figma",
     category: "Web Design",
   },
   {
     name: "React & Next.js",
-    description: "Modern JavaScript frameworks for building fast, scalable web applications and user interfaces.",
-    icon: "/placeholder.svg?height=40&width=40&text=React",
+    description:
+      "Modern JavaScript frameworks for building fast, scalable web applications and user interfaces.",
+    icon: "/react.png?height=40&width=40&text=React",
     category: "Fullstack Development",
   },
   {
     name: "Adobe Creative Suite",
     description:
       "Professional graphics design tools including Photoshop, Illustrator, and InDesign for visual content.",
-    icon: "/placeholder.svg?height=40&width=40&text=Adobe",
+    icon: "/creative-cloud.png?height=40&width=40&text=Adobe",
     category: "Graphics Design",
   },
   {
     name: "After Effects",
-    description: "Industry-standard motion graphics and visual effects software for video post-production.",
-    icon: "/placeholder.svg?height=40&width=40&text=AE",
+    description:
+      "Industry-standard motion graphics and visual effects software for video post-production.",
+    icon: "/after-effects.png?height=40&width=40&text=AE",
     category: "Video Editing",
   },
   {
     name: "Node.js & MongoDB",
-    description: "Backend development tools for building robust server-side applications and database management.",
-    icon: "/placeholder.svg?height=40&width=40&text=Node",
+    description:
+      "Backend development tools for building robust server-side applications and database management.",
+    icon: "/node-js.png?height=40&width=40&text=Node",
     category: "Fullstack Development",
   },
   {
     name: "Premiere Pro",
-    description: "Professional video editing software for creating high-quality video content and storytelling.",
-    icon: "/placeholder.svg?height=40&width=40&text=Premiere",
+    description:
+      "Professional video editing software for creating high-quality video content and storytelling.",
+    icon: "/premiere-pro.png?height=40&width=40&text=Premiere",
     category: "Video Editing",
   },
   {
     name: "TypeScript",
-    description: "Strongly typed programming language that builds on JavaScript for better development experience.",
-    icon: "/placeholder.svg?height=40&width=40&text=TS",
+    description:
+      "Strongly typed programming language that builds on JavaScript for better development experience.",
+    icon: "/typescript.png?height=40&width=40&text=TS",
     category: "Fullstack Development",
   },
   {
-    name: "Blender",
-    description: "Open-source 3D creation suite for modeling, animation, and rendering visual content.",
-    icon: "/placeholder.svg?height=40&width=40&text=Blender",
-    category: "Graphics Design",
+    name: "Wordpress",
+    description: "Content Management System for building websites and blogs.",
+    icon: "/wordpress.png?height=40&width=40&text=Wordpress",
+    category: "Fullstack Development",
   },
-  {
-    name: "DaVinci Resolve",
-    description: "Professional color grading and video editing software for cinematic post-production workflows.",
-    icon: "/placeholder.svg?height=40&width=40&text=DaVinci",
-    category: "Video Editing",
-  },
-]
+  // {
+  //   name: "DaVinci Resolve",
+  //   description: "Professional color grading and video editing software for cinematic post-production workflows.",
+  //   icon: "/placeholder.svg?height=40&width=40&text=DaVinci",
+  //   category: "Video Editing",
+  // },
+];
 
 export function ToolsSection() {
   return (
@@ -66,10 +72,12 @@ export function ToolsSection() {
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-foreground mb-4">Tools I Use with Ease</h2>
+          <h2 className="text-4xl font-bold text-foreground mb-4">
+            Tools I Use with Ease
+          </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Mastering industry-leading tools across web design, fullstack development, graphics design, and video
-            editing
+            Mastering industry-leading tools across web design, fullstack
+            development, graphics design, and video editing
           </p>
         </div>
 
@@ -95,7 +103,9 @@ export function ToolsSection() {
               <h3 className="text-xl font-semibold text-foreground mb-3 group-hover:text-purple-300 transition-colors duration-300">
                 {tool.name}
               </h3>
-              <p className="text-muted-foreground leading-relaxed">{tool.description}</p>
+              <p className="text-muted-foreground leading-relaxed">
+                {tool.description}
+              </p>
 
               {/* Category Badge */}
               <div className="absolute top-4 right-4">
@@ -111,5 +121,5 @@ export function ToolsSection() {
         </div>
       </div>
     </section>
-  )
+  );
 }

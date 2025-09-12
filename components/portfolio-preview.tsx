@@ -1,77 +1,79 @@
-"use client"
+"use client";
 
-import { useState } from "react"
-import { Button } from "@/components/ui/button"
-import { ProjectCard } from "@/components/project-card"
-import Link from "next/link"
+import { useState } from "react";
+import { Button } from "@/components/ui/button";
+import { ProjectCard } from "@/components/project-card";
+import Link from "next/link";
 
 const portfolioItems = [
   {
-    title: "E-Commerce Platform",
-    description: "Full-stack e-commerce solution with React and Node.js",
+    title: "Addis Path Trailers",
+    description: "A website for a trailer rental company",
     fullDescription:
-      "Complete e-commerce platform with user authentication, payment processing, inventory management, and admin dashboard. Built with modern technologies for scalability and performance.",
-    category: "Fullstack Development",
-    year: "2023",
-    image: "/modern-ecommerce-clothing-website.jpg",
-    tools: ["React", "Node.js", "MongoDB", "TypeScript", "Tailwind"],
-    href: "https://ecommerce-demo.vercel.app",
-    github: "https://github.com/username/ecommerce-platform",
-  },
-  {
-    title: "Brand Identity Design",
-    description: "Complete brand identity and logo design for tech startup",
-    fullDescription:
-      "Comprehensive brand identity package including logo design, color palette, typography, business cards, and brand guidelines for a modern tech startup.",
-    category: "Graphics Design",
-    year: "2023",
-    image: "/modern-brand-identity-design-showcase.jpg",
-    tools: ["Figma", "Photoshop", "Illustrator"],
-  },
-  {
-    title: "Portfolio Website",
-    description: "Modern portfolio website with stunning animations",
-    fullDescription:
-      "Responsive portfolio website featuring smooth animations, dark theme, project showcases, and contact forms. Optimized for performance and SEO.",
+      "A website for a trailer rental company that allows users to rent trailers for various purposes.",
     category: "Web Design",
     year: "2023",
-    image: "/modern-developer-portfolio-website-dark-theme.jpg",
-    tools: ["Next.js", "React", "Tailwind", "TypeScript"],
-    href: "https://portfolio-demo.vercel.app",
+    image: "/addis-path.png",
+    tools: ["Wordpress", "Elementor", "CSS", "JavaScript"],
+    href: "https://addispathtrailers.com",
   },
   {
-    title: "Mobile Banking App",
-    description: "React Native mobile app for digital banking",
+    title: "Addis Path Trailers",
+    description: "A website for a trailer rental company",
     fullDescription:
-      "Secure mobile banking application with biometric authentication, transaction history, bill payments, and real-time notifications.",
-    category: "Fullstack Development",
-    year: "2023",
-    image: "/placeholder.svg?height=400&width=600&text=Banking+App",
-    tools: ["React Native", "Firebase", "TypeScript", "Node.js"],
-    github: "https://github.com/username/banking-app",
-  },
-  {
-    title: "Product Launch Video",
-    description: "Promotional video for SaaS product launch",
-    fullDescription:
-      "High-quality promotional video featuring motion graphics, professional voiceover, and compelling storytelling for a SaaS product launch campaign.",
-    category: "Video Editing",
-    year: "2023",
-    image: "/video-editing-timeline-interface.jpg",
-    tools: ["After Effects", "Premiere Pro", "Photoshop"],
-  },
-  {
-    title: "Restaurant Website",
-    description: "Responsive website design for local restaurant",
-    fullDescription:
-      "Modern restaurant website with online menu, reservation system, location details, and customer reviews. Fully responsive and SEO optimized.",
+      "A website for a trailer rental company that allows users to rent trailers for various purposes.",
     category: "Web Design",
     year: "2023",
-    image: "/placeholder.svg?height=400&width=600&text=Restaurant+Site",
-    tools: ["HTML", "CSS", "JavaScript", "React"],
-    href: "https://restaurant-demo.vercel.app",
+    image: "/addis-path.png",
+    tools: ["Wordpress", "Elementor", "CSS", "JavaScript"],
+    href: "https://addispathtrailers.com",
   },
-]
+  {
+    title: "Addis Path Trailers",
+    description: "A website for a trailer rental company",
+    fullDescription:
+      "A website for a trailer rental company that allows users to rent trailers for various purposes.",
+    category: "Web Design",
+    year: "2023",
+    image: "/addis-path.png",
+    tools: ["Wordpress", "Elementor", "CSS", "JavaScript"],
+    href: "https://addispathtrailers.com",
+  },
+
+  {
+    title: "Grace Church",
+    description: "A website and a dashboard for a church",
+    fullDescription:
+      "A website and a dashboard for a church that allows users to manage their church's events, sermons, and other resources.",
+    category: "Fullstack Development",
+    year: "2023",
+    image: "/grace-church.png",
+    tools: ["Next.js", "Tailwind", "TypeScript", "Node.js"],
+    github: "https://github.com/justmikk/grace-church",
+  },
+  {
+    title: "Grace Church",
+    description: "A website and a dashboard for a church",
+    fullDescription:
+      "A website and a dashboard for a church that allows users to manage their church's events, sermons, and other resources.",
+    category: "Fullstack Development",
+    year: "2023",
+    image: "/grace-church.png",
+    tools: ["Next.js", "Tailwind", "TypeScript", "Node.js"],
+    github: "https://github.com/justmikk/grace-church",
+  },
+  {
+    title: "Grace Church",
+    description: "A website and a dashboard for a church",
+    fullDescription:
+      "A website and a dashboard for a church that allows users to manage their church's events, sermons, and other resources.",
+    category: "Fullstack Development",
+    year: "2023",
+    image: "/grace-church.png",
+    tools: ["Next.js", "Tailwind", "TypeScript", "Node.js"],
+    github: "https://github.com/justmikk/grace-church",
+  },
+];
 
 const filterCategories = [
   { id: "all", label: "All Projects" },
@@ -79,20 +81,24 @@ const filterCategories = [
   { id: "Fullstack Development", label: "Fullstack Development" },
   { id: "Graphics Design", label: "Graphics Design" },
   { id: "Video Editing", label: "Video Editing" },
-]
+];
 
 export function PortfolioPreview() {
-  const [activeFilter, setActiveFilter] = useState("all")
+  const [activeFilter, setActiveFilter] = useState("all");
 
   const filteredItems =
-    activeFilter === "all" ? portfolioItems : portfolioItems.filter((item) => item.category === activeFilter)
+    activeFilter === "all"
+      ? portfolioItems
+      : portfolioItems.filter((item) => item.category === activeFilter);
 
   return (
     <section className="py-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-foreground mb-4">My Creative Portfolios</h2>
+          <h2 className="text-4xl font-bold text-foreground mb-4">
+            My Creative Portfolios
+          </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             Explore a showcase of my diverse projects and creations
           </p>
@@ -145,5 +151,5 @@ export function PortfolioPreview() {
         </div>
       </div>
     </section>
-  )
+  );
 }
