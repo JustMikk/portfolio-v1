@@ -1,7 +1,13 @@
-"use client"
+"use client";
 
-import { ArrowRight, Twitter, Instagram, Youtube, Dribbble } from "lucide-react"
-import { Button } from "@/components/ui/button"
+import {
+  ArrowRight,
+  Twitter,
+  Instagram,
+  Youtube,
+  Dribbble,
+} from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 export function Footer() {
   return (
@@ -10,18 +16,26 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Brand Section */}
           <div className="lg:col-span-1">
-            <h3 className="text-2xl font-bold text-foreground mb-4">Dedicated to design with a passion</h3>
+            <h3 className="text-2xl font-bold text-foreground mb-4">
+              Dedicated to design with a passion
+            </h3>
             <p className="text-muted-foreground leading-relaxed mb-6">
-              Bringing creativity on a global scale, I am a designer driven by passion and innovation.
+              Bringing creativity on a global scale, I am a designer driven by
+              passion and innovation.
             </p>
           </div>
 
           {/* Explore Section */}
           <div>
-            <h4 className="text-lg font-semibold text-foreground mb-6">Explore</h4>
+            <h4 className="text-lg font-semibold text-foreground mb-6">
+              Explore
+            </h4>
             <ul className="space-y-3">
               <li>
-                <a href="#about" className="text-muted-foreground hover:text-purple-400 transition-colors duration-200">
+                <a
+                  href="#about"
+                  className="text-muted-foreground hover:text-purple-400 transition-colors duration-200"
+                >
                   About Me
                 </a>
               </li>
@@ -54,7 +68,9 @@ export function Footer() {
 
           {/* Say Hello Section */}
           <div>
-            <h4 className="text-lg font-semibold text-foreground mb-6">Say hello!</h4>
+            <h4 className="text-lg font-semibold text-foreground mb-6">
+              Say hello!
+            </h4>
             <ul className="space-y-3">
               <li>
                 <a
@@ -98,16 +114,25 @@ export function Footer() {
 
               <div className="space-y-3">
                 <div className="flex items-center justify-end gap-2">
-                  <span className="text-foreground font-medium">Have an idea?</span>
-                  <Button size="sm" className="bg-purple-600 hover:bg-purple-700 text-white rounded-full w-10 h-10 p-0">
+                  <span className="text-foreground font-medium">
+                    Have an idea?
+                  </span>
+                  <Button
+                    size="sm"
+                    className="bg-purple-600 hover:bg-purple-700 text-white rounded-full w-10 h-10 p-0"
+                  >
                     <ArrowRight className="w-4 h-4" />
                   </Button>
                 </div>
 
                 <div className="text-right">
-                  <p className="text-sm text-muted-foreground mb-2">Creative tools (coming soon!)</p>
+                  <p className="text-sm text-muted-foreground mb-2">
+                    Creative tools (coming soon!)
+                  </p>
                   <div className="flex items-center justify-end gap-2">
-                    <span className="text-foreground font-medium">Courses & Tools</span>
+                    <span className="text-foreground font-medium">
+                      Courses & Tools
+                    </span>
                     <Button
                       size="sm"
                       className="bg-purple-600 hover:bg-purple-700 text-white rounded-full w-10 h-10 p-0"
@@ -154,19 +179,27 @@ export function Footer() {
 
             {/* Legal Links */}
             <div className="flex items-center gap-6 text-sm text-muted-foreground">
-              <a href="#terms" className="hover:text-purple-400 transition-colors duration-200">
+              <a
+                href="#terms"
+                className="hover:text-purple-400 transition-colors duration-200"
+              >
                 Terms & Conditions
               </a>
-              <a href="#privacy" className="hover:text-purple-400 transition-colors duration-200">
+              <a
+                href="#privacy"
+                className="hover:text-purple-400 transition-colors duration-200"
+              >
                 Privacy Policy
               </a>
             </div>
 
             {/* Copyright */}
-            <div className="text-sm text-muted-foreground">© 2024 Nathan Cusick. All rights reserved.</div>
+            <div className="text-sm text-muted-foreground">
+              © 2025 Mikiyas Hailegebreal. All rights reserved.
+            </div>
           </div>
         </div>
       </div>
     </footer>
-  )
+  );
 }

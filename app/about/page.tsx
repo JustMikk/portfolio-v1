@@ -1,10 +1,10 @@
-import { Navigation } from "@/components/navigation"
-import { FAQSection } from "@/components/faq-section"
-import { Footer } from "@/components/footer"
-import { Button } from "@/components/ui/button"
-import { Card } from "@/components/ui/card"
-import { AnimatedSection } from "@/components/animated-section"
-import { Twitter, Linkedin, Github } from "lucide-react"
+import { Navigation } from "@/components/navigation";
+import { FAQSection } from "@/components/faq-section";
+import { Footer } from "@/components/footer";
+import { Button } from "@/components/ui/button";
+import { Card } from "@/components/ui/card";
+import { AnimatedSection } from "@/components/animated-section";
+import { Twitter, Linkedin, Github } from "lucide-react";
 
 export default function AboutPage() {
   const milestones = [
@@ -44,7 +44,7 @@ export default function AboutPage() {
       description:
         "In my path of growth and advancement, I embarked on an exciting journey into emerging technologies and design trends. I expanded my skill set to include advanced user experience. I made a year of pushing boundaries and exploring new frontiers in web design and development.",
     },
-  ]
+  ];
 
   return (
     <div className="min-h-screen bg-black text-white relative overflow-hidden">
@@ -68,7 +68,7 @@ export default function AboutPage() {
                   <div className="absolute inset-0 bg-gradient-to-br from-purple-400/20 to-purple-600/40"></div>
                   <img
                     src="/professional-headshot-of-a-web-designer-in-checker.jpg"
-                    alt="Nathan Cusick - Professional Web Designer"
+                    alt="Mikiyas Hailegebreal - Professional Web Designer"
                     className="w-full h-full object-cover rounded-2xl relative z-10"
                   />
                 </div>
@@ -85,7 +85,7 @@ export default function AboutPage() {
                   <h1 className="text-5xl lg:text-6xl font-bold text-white">
                     I'm{" "}
                     <span className="bg-gradient-to-r from-purple-400 to-purple-600 bg-clip-text text-transparent">
-                      Nathan
+                      Mikiyas
                     </span>{" "}
                     Cusick
                   </h1>
@@ -124,12 +124,16 @@ export default function AboutPage() {
                       </div>
                     </div>
                     <p className="text-gray-300 leading-relaxed">
-                      I am a skilled web designer with a passion for creating visually stunning and user-friendly
-                      websites. With a keen eye for detail and a commitment to excellence, I specialize in crafting
-                      online experiences that leave a lasting impression. From concept to launch, I collaborate closely
-                      with clients to bring their vision to life and help digital presence stand out from the crowd.
-                      With my expertise and dedication, I am here to make your online presence shine and make a powerful
-                      impact in the digital world.
+                      I am a skilled web designer with a passion for creating
+                      visually stunning and user-friendly websites. With a keen
+                      eye for detail and a commitment to excellence, I
+                      specialize in crafting online experiences that leave a
+                      lasting impression. From concept to launch, I collaborate
+                      closely with clients to bring their vision to life and
+                      help digital presence stand out from the crowd. With my
+                      expertise and dedication, I am here to make your online
+                      presence shine and make a powerful impact in the digital
+                      world.
                     </p>
                   </Card>
                 </div>
@@ -143,10 +147,14 @@ export default function AboutPage() {
         <section className="py-20 px-4">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-4xl lg:text-5xl font-bold mb-4 text-white">Milestones of My Career</h2>
+              <h2 className="text-4xl lg:text-5xl font-bold mb-4 text-white">
+                Milestones of My Career
+              </h2>
               <p className="text-gray-400 max-w-3xl mx-auto">
-                Embarking on a journey through the milestones that have shaped my professional path, each marker and
-                successes celebrated, all contributing to a rich narrative of professional growth and achievement.
+                Embarking on a journey through the milestones that have shaped
+                my professional path, each marker and successes celebrated, all
+                contributing to a rich narrative of professional growth and
+                achievement.
               </p>
             </div>
 
@@ -156,7 +164,9 @@ export default function AboutPage() {
                   <Card className="bg-gray-900/50 border-gray-800 p-6 h-full hover:border-purple-500/50 transition-all duration-300 backdrop-blur-sm">
                     <div className="space-y-4">
                       <div className="flex items-center justify-between">
-                        <span className="text-2xl font-bold text-purple-400">{milestone.year}</span>
+                        <span className="text-2xl font-bold text-purple-400">
+                          {milestone.year}
+                        </span>
                         <div className="w-12 h-12 relative">
                           {/* Geometric decoration */}
                           <div className="absolute inset-0 border-2 border-purple-500/30 transform rotate-45"></div>
@@ -169,7 +179,9 @@ export default function AboutPage() {
                         {milestone.title}
                       </h3>
 
-                      <p className="text-gray-400 text-sm leading-relaxed">{milestone.description}</p>
+                      <p className="text-gray-400 text-sm leading-relaxed">
+                        {milestone.description}
+                      </p>
                     </div>
                   </Card>
                 </div>
@@ -185,5 +197,5 @@ export default function AboutPage() {
 
       <Footer />
     </div>
-  )
+  );
 }

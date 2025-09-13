@@ -1,17 +1,17 @@
-"use client"
+"use client";
 
-import type React from "react"
+import type React from "react";
 
-import { useState } from "react"
-import { Navigation } from "@/components/navigation"
-import { FAQSection } from "@/components/faq-section"
-import { Footer } from "@/components/footer"
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { Textarea } from "@/components/ui/textarea"
-import { Checkbox } from "@/components/ui/checkbox"
-import { AnimatedSection } from "@/components/animated-section"
-import { Mail, Phone, MapPin, Send } from "lucide-react"
+import { useState } from "react";
+import { Navigation } from "@/components/navigation";
+import { FAQSection } from "@/components/faq-section";
+import { Footer } from "@/components/footer";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Checkbox } from "@/components/ui/checkbox";
+import { AnimatedSection } from "@/components/animated-section";
+import { Mail, Phone, MapPin, Send } from "lucide-react";
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -21,29 +21,35 @@ export default function ContactPage() {
     phone: "",
     services: [] as string[],
     message: "",
-  })
+  });
 
-  const services = ["Web Design", "UI UX Design", "Web Development", "SEO Optimization", "E-commerce Solutions"]
+  const services = [
+    "Web Design",
+    "UI UX Design",
+    "Web Development",
+    "SEO Optimization",
+    "E-commerce Solutions",
+  ];
 
   const handleServiceChange = (service: string, checked: boolean) => {
     if (checked) {
       setFormData((prev) => ({
         ...prev,
         services: [...prev.services, service],
-      }))
+      }));
     } else {
       setFormData((prev) => ({
         ...prev,
         services: prev.services.filter((s) => s !== service),
-      }))
+      }));
     }
-  }
+  };
 
   const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
-    console.log("Form submitted:", formData)
+    e.preventDefault();
+    console.log("Form submitted:", formData);
     // Handle form submission here
-  }
+  };
 
   return (
     <div className="min-h-screen bg-black text-white relative overflow-hidden">
@@ -62,10 +68,12 @@ export default function ContactPage() {
         <section className="pt-32 pb-20 px-6">
           <div className="max-w-6xl mx-auto text-center">
             <h1 className="text-5xl md:text-7xl font-bold mb-6">
-              We'd <span className="text-purple-400">Love to here</span> from you.
+              We'd <span className="text-purple-400">Love to here</span> from
+              you.
             </h1>
             <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-              Ready to connect and collaborate - drop me a line and let's turn ideas into reality!
+              Ready to connect and collaborate - drop me a line and let's turn
+              ideas into reality!
             </p>
           </div>
         </section>
@@ -81,20 +89,34 @@ export default function ContactPage() {
                   {/* Name & Company Row */}
                   <div className="grid md:grid-cols-2 gap-6">
                     <div>
-                      <label className="block text-sm font-medium mb-2">Name</label>
+                      <label className="block text-sm font-medium mb-2">
+                        Name
+                      </label>
                       <Input
                         placeholder="Your Name"
                         value={formData.name}
-                        onChange={(e) => setFormData((prev) => ({ ...prev, name: e.target.value }))}
+                        onChange={(e) =>
+                          setFormData((prev) => ({
+                            ...prev,
+                            name: e.target.value,
+                          }))
+                        }
                         className="bg-gray-900 border-gray-700 text-white placeholder-gray-500"
                       />
                     </div>
                     <div>
-                      <label className="block text-sm font-medium mb-2">Company Name</label>
+                      <label className="block text-sm font-medium mb-2">
+                        Company Name
+                      </label>
                       <Input
                         placeholder="Your Name"
                         value={formData.company}
-                        onChange={(e) => setFormData((prev) => ({ ...prev, company: e.target.value }))}
+                        onChange={(e) =>
+                          setFormData((prev) => ({
+                            ...prev,
+                            company: e.target.value,
+                          }))
+                        }
                         className="bg-gray-900 border-gray-700 text-white placeholder-gray-500"
                       />
                     </div>
@@ -103,21 +125,35 @@ export default function ContactPage() {
                   {/* Email & Phone Row */}
                   <div className="grid md:grid-cols-2 gap-6">
                     <div>
-                      <label className="block text-sm font-medium mb-2">Email</label>
+                      <label className="block text-sm font-medium mb-2">
+                        Email
+                      </label>
                       <Input
                         type="email"
                         placeholder="Email Address"
                         value={formData.email}
-                        onChange={(e) => setFormData((prev) => ({ ...prev, email: e.target.value }))}
+                        onChange={(e) =>
+                          setFormData((prev) => ({
+                            ...prev,
+                            email: e.target.value,
+                          }))
+                        }
                         className="bg-gray-900 border-gray-700 text-white placeholder-gray-500"
                       />
                     </div>
                     <div>
-                      <label className="block text-sm font-medium mb-2">Phone Number</label>
+                      <label className="block text-sm font-medium mb-2">
+                        Phone Number
+                      </label>
                       <Input
                         placeholder="Phone Number"
                         value={formData.phone}
-                        onChange={(e) => setFormData((prev) => ({ ...prev, phone: e.target.value }))}
+                        onChange={(e) =>
+                          setFormData((prev) => ({
+                            ...prev,
+                            phone: e.target.value,
+                          }))
+                        }
                         className="bg-gray-900 border-gray-700 text-white placeholder-gray-500"
                       />
                     </div>
@@ -125,17 +161,27 @@ export default function ContactPage() {
 
                   {/* Services Required */}
                   <div>
-                    <label className="block text-sm font-medium mb-4">Services Required</label>
+                    <label className="block text-sm font-medium mb-4">
+                      Services Required
+                    </label>
                     <div className="grid md:grid-cols-2 gap-4">
                       {services.map((service) => (
-                        <div key={service} className="flex items-center space-x-3">
+                        <div
+                          key={service}
+                          className="flex items-center space-x-3"
+                        >
                           <Checkbox
                             id={service}
                             checked={formData.services.includes(service)}
-                            onCheckedChange={(checked) => handleServiceChange(service, checked as boolean)}
+                            onCheckedChange={(checked) =>
+                              handleServiceChange(service, checked as boolean)
+                            }
                             className="border-gray-600 data-[state=checked]:bg-purple-600 data-[state=checked]:border-purple-600"
                           />
-                          <label htmlFor={service} className="text-sm text-gray-300 cursor-pointer">
+                          <label
+                            htmlFor={service}
+                            className="text-sm text-gray-300 cursor-pointer"
+                          >
                             {service}
                           </label>
                         </div>
@@ -145,12 +191,19 @@ export default function ContactPage() {
 
                   {/* Message */}
                   <div>
-                    <label className="block text-sm font-medium mb-2">Message</label>
+                    <label className="block text-sm font-medium mb-2">
+                      Message
+                    </label>
                     <Textarea
                       placeholder="Your Message"
                       rows={6}
                       value={formData.message}
-                      onChange={(e) => setFormData((prev) => ({ ...prev, message: e.target.value }))}
+                      onChange={(e) =>
+                        setFormData((prev) => ({
+                          ...prev,
+                          message: e.target.value,
+                        }))
+                      }
                       className="bg-gray-900 border-gray-700 text-white placeholder-gray-500 resize-none"
                     />
                   </div>
@@ -172,8 +225,10 @@ export default function ContactPage() {
                 <div className="bg-gray-900 rounded-2xl p-6 border border-gray-800 hover:border-purple-500 transition-colors duration-300 backdrop-blur-sm">
                   <div className="flex items-center justify-between">
                     <div>
-                      <h3 className="text-lg font-semibold mb-2">You can Email Me Here</h3>
-                      <p className="text-gray-400">nathan.one@gmail.com</p>
+                      <h3 className="text-lg font-semibold mb-2">
+                        You can Email Me Here
+                      </h3>
+                      <p className="text-gray-400">mikiyasbutu@gmail.com</p>
                     </div>
                     <div className="w-12 h-12 bg-purple-600 rounded-full flex items-center justify-center">
                       <Mail className="w-6 h-6 text-white" />
@@ -185,8 +240,10 @@ export default function ContactPage() {
                 <div className="bg-gray-900 rounded-2xl p-6 border border-gray-800 hover:border-purple-500 transition-colors duration-300 backdrop-blur-sm">
                   <div className="flex items-center justify-between">
                     <div>
-                      <h3 className="text-lg font-semibold mb-2">Give Me a Call on</h3>
-                      <p className="text-gray-400">+91 9876 12 3456</p>
+                      <h3 className="text-lg font-semibold mb-2">
+                        Give Me a Call on
+                      </h3>
+                      <p className="text-gray-400">+251 967 991 617</p>
                     </div>
                     <div className="w-12 h-12 bg-purple-600 rounded-full flex items-center justify-center">
                       <Phone className="w-6 h-6 text-white" />
@@ -199,7 +256,7 @@ export default function ContactPage() {
                   <div className="flex items-center justify-between">
                     <div>
                       <h3 className="text-lg font-semibold mb-2">Location</h3>
-                      <p className="text-gray-400">Somewhere in the World</p>
+                      <p className="text-gray-400">Addis Ababa, Ethiopia</p>
                     </div>
                     <div className="w-12 h-12 bg-purple-600 rounded-full flex items-center justify-center">
                       <MapPin className="w-6 h-6 text-white" />
@@ -218,5 +275,5 @@ export default function ContactPage() {
 
       <Footer />
     </div>
-  )
+  );
 }

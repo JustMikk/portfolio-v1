@@ -1,9 +1,9 @@
-"use client"
+"use client";
 
-import { useState, useEffect } from "react"
-import { Star, ChevronLeft, ChevronRight, Quote } from "lucide-react"
-import { Button } from "@/components/ui/button"
-import Image from "next/image"
+import { useState, useEffect } from "react";
+import { Star, ChevronLeft, ChevronRight, Quote } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import Image from "next/image";
 
 const testimonials = [
   {
@@ -14,7 +14,7 @@ const testimonials = [
     image: "/placeholder.svg?height=80&width=80&text=JA",
     rating: 5,
     content:
-      "Nathan's creative approach and technical expertise transformed our digital presence completely. The results exceeded our expectations and drove significant business growth.",
+      "Mikiyas's creative approach and technical expertise transformed our digital presence completely. The results exceeded our expectations and drove significant business growth.",
   },
   {
     id: 2,
@@ -24,7 +24,7 @@ const testimonials = [
     image: "/placeholder.svg?height=80&width=80&text=ST",
     rating: 5,
     content:
-      "Working with Nathan was an absolute pleasure. His attention to detail and innovative design solutions helped us achieve our vision perfectly.",
+      "Working with Mikiyas was an absolute pleasure. His attention to detail and innovative design solutions helped us achieve our vision perfectly.",
   },
   {
     id: 3,
@@ -34,44 +34,49 @@ const testimonials = [
     image: "/placeholder.svg?height=80&width=80&text=ER",
     rating: 5,
     content:
-      "The level of professionalism and creativity Nathan brings to every project is outstanding. Our user engagement increased by 300% after the redesign.",
+      "The level of professionalism and creativity Mikiyas brings to every project is outstanding. Our user engagement increased by 300% after the redesign.",
   },
-]
+];
 
 export function TestimonialsSection() {
-  const [currentIndex, setCurrentIndex] = useState(0)
-  const [isAutoPlaying, setIsAutoPlaying] = useState(true)
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [isAutoPlaying, setIsAutoPlaying] = useState(true);
 
   useEffect(() => {
-    if (!isAutoPlaying) return
+    if (!isAutoPlaying) return;
 
     const interval = setInterval(() => {
-      setCurrentIndex((prev) => (prev + 1) % testimonials.length)
-    }, 5000)
+      setCurrentIndex((prev) => (prev + 1) % testimonials.length);
+    }, 5000);
 
-    return () => clearInterval(interval)
-  }, [isAutoPlaying])
+    return () => clearInterval(interval);
+  }, [isAutoPlaying]);
 
   const nextTestimonial = () => {
-    setCurrentIndex((prev) => (prev + 1) % testimonials.length)
-    setIsAutoPlaying(false)
-  }
+    setCurrentIndex((prev) => (prev + 1) % testimonials.length);
+    setIsAutoPlaying(false);
+  };
 
   const prevTestimonial = () => {
-    setCurrentIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length)
-    setIsAutoPlaying(false)
-  }
+    setCurrentIndex(
+      (prev) => (prev - 1 + testimonials.length) % testimonials.length
+    );
+    setIsAutoPlaying(false);
+  };
 
-  const currentTestimonial = testimonials[currentIndex]
+  const currentTestimonial = testimonials[currentIndex];
 
   return (
     <section className="py-20 px-4 sm:px-6 lg:px-8 bg-card/30">
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-foreground mb-4">Happy & Satisfied Faces</h2>
+          <h2 className="text-4xl font-bold text-foreground mb-4">
+            Happy & Satisfied Faces
+          </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Hear what our clients have to say about their experience working with us
+            Hear what our clients have to say about their experience working
+            with us
           </p>
         </div>
 
@@ -108,7 +113,10 @@ export function TestimonialsSection() {
               {/* Stars */}
               <div className="flex gap-1 mb-6">
                 {[...Array(currentTestimonial.rating)].map((_, i) => (
-                  <Star key={i} className="w-5 h-5 fill-purple-400 text-purple-400" />
+                  <Star
+                    key={i}
+                    className="w-5 h-5 fill-purple-400 text-purple-400"
+                  />
                 ))}
               </div>
 
@@ -129,9 +137,15 @@ export function TestimonialsSection() {
                   />
                 </div>
                 <div>
-                  <div className="font-semibold text-foreground text-lg">{currentTestimonial.name}</div>
-                  <div className="text-muted-foreground">{currentTestimonial.role}</div>
-                  <div className="text-purple-400 text-sm">{currentTestimonial.company}</div>
+                  <div className="font-semibold text-foreground text-lg">
+                    {currentTestimonial.name}
+                  </div>
+                  <div className="text-muted-foreground">
+                    {currentTestimonial.role}
+                  </div>
+                  <div className="text-purple-400 text-sm">
+                    {currentTestimonial.company}
+                  </div>
                 </div>
               </div>
             </div>
@@ -142,11 +156,13 @@ export function TestimonialsSection() {
                 <button
                   key={index}
                   onClick={() => {
-                    setCurrentIndex(index)
-                    setIsAutoPlaying(false)
+                    setCurrentIndex(index);
+                    setIsAutoPlaying(false);
                   }}
                   className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                    index === currentIndex ? "bg-purple-500 w-8" : "bg-purple-500/30 hover:bg-purple-500/50"
+                    index === currentIndex
+                      ? "bg-purple-500 w-8"
+                      : "bg-purple-500/30 hover:bg-purple-500/50"
                   }`}
                 />
               ))}
@@ -155,5 +171,5 @@ export function TestimonialsSection() {
         </div>
       </div>
     </section>
-  )
+  );
 }

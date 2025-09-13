@@ -31,7 +31,7 @@ export function HeroSection() {
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-purple-500/10 border border-purple-500/20 mb-6 animate-fade-in">
               <Coffee className="w-4 h-4 text-purple-400" />
               <span className="text-sm text-purple-300">
-                Hey there! I'm Nathan
+                Hey there! I'm Mikiyas
               </span>
             </div>
 
@@ -81,7 +81,7 @@ export function HeroSection() {
               <Button
                 size="lg"
                 className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-4 text-lg rounded-xl transition-all duration-300 hover:shadow-xl hover:shadow-purple-500/25 hover:scale-105"
-                aria-label="Contact Nathan for collaboration"
+                aria-label="Contact Mikiyas for collaboration"
               >
                 Let's Work Together
                 <ArrowRight className="ml-2 w-5 h-5" />
@@ -90,7 +90,7 @@ export function HeroSection() {
                 variant="outline"
                 size="lg"
                 className="border-purple-500/30 text-purple-300 hover:bg-purple-500/10 px-8 py-4 text-lg rounded-xl transition-all duration-300 bg-transparent backdrop-blur-sm hover:border-purple-500/50"
-                aria-label="View Nathan's portfolio"
+                aria-label="View Mikiyas's portfolio"
               >
                 See My Work
               </Button>
@@ -106,8 +106,8 @@ export function HeroSection() {
                 <div className="absolute inset-0 bg-gradient-to-r from-purple-500 to-indigo-500 rounded-full animate-pulse opacity-20"></div>
                 <div className="absolute inset-2 bg-gradient-to-r from-purple-600 to-indigo-600 rounded-full p-1">
                   <Image
-                    src="/profile.jpg"
-                    alt="Nathan - Full-Stack Developer and Designer"
+                    src="/profile.webp"
+                    alt="Mikiyas - Full-Stack Developer and Designer"
                     className="w-full h-full rounded-full object-cover border-2 border-white/10"
                     loading="eager"
                     width={192}
@@ -128,7 +128,7 @@ export function HeroSection() {
                 <div className="space-y-2 text-sm font-mono">
                   <div className="text-purple-400">const developer = {`{`}</div>
                   <div className="text-gray-300 ml-4">
-                    name: <span className="text-green-400">"Nathan"</span>,
+                    name: <span className="text-green-400">"Mikiyas"</span>,
                   </div>
                   <div className="text-gray-300 ml-4">
                     skills: [<span className="text-blue-400">"React"</span>,{" "}
