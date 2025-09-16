@@ -18,10 +18,36 @@ const tools = [
     category: "Fullstack Development",
   },
   {
-    name: "Adobe Creative Suite",
+    name: "Wordpress",
+    description: "Content Management System for building websites and blogs.",
+    icon: "/wordpress.png?height=40&width=40&text=Wordpress",
+    category: "Web Design",
+  },
+  {
+    name: "TypeScript",
     description:
-      "Professional graphics design tools including Photoshop, Illustrator, and InDesign for visual content.",
-    icon: "/creative-cloud.png?height=40&width=40&text=Adobe",
+      "Strongly typed programming language that builds on JavaScript for better development experience.",
+    icon: "/typescript.png?height=40&width=40&text=TS",
+    category: "Fullstack Development",
+  },
+  {
+    name: "Node.js & MongoDB",
+    description:
+      "Backend development tools for building robust server-side applications and database management.",
+    icon: "/node-js.png?height=40&width=40&text=Node",
+    category: "Fullstack Development",
+  },
+  {
+    name: "Git",
+    description:
+      "Version control system for tracking changes in any set of files.",
+    icon: "/git.svg?height=40&width=40&text=Git",
+    category: "Fullstack Development",
+  },
+  {
+    name: "Adobe Photoshop",
+    description: "Professional graphics design tool for visual content.",
+    icon: "/photoshop.png?height=40&width=40&text=Adobe",
     category: "Graphics Design",
   },
   {
@@ -32,38 +58,12 @@ const tools = [
     category: "Video Editing",
   },
   {
-    name: "Node.js & MongoDB",
-    description:
-      "Backend development tools for building robust server-side applications and database management.",
-    icon: "/node-js.png?height=40&width=40&text=Node",
-    category: "Fullstack Development",
-  },
-  {
     name: "Premiere Pro",
     description:
       "Professional video editing software for creating high-quality video content and storytelling.",
     icon: "/premiere-pro.png?height=40&width=40&text=Premiere",
     category: "Video Editing",
   },
-  {
-    name: "TypeScript",
-    description:
-      "Strongly typed programming language that builds on JavaScript for better development experience.",
-    icon: "/typescript.png?height=40&width=40&text=TS",
-    category: "Fullstack Development",
-  },
-  {
-    name: "Wordpress",
-    description: "Content Management System for building websites and blogs.",
-    icon: "/wordpress.png?height=40&width=40&text=Wordpress",
-    category: "Fullstack Development",
-  },
-  // {
-  //   name: "DaVinci Resolve",
-  //   description: "Professional color grading and video editing software for cinematic post-production workflows.",
-  //   icon: "/placeholder.svg?height=40&width=40&text=DaVinci",
-  //   category: "Video Editing",
-  // },
 ];
 
 export function ToolsSection() {

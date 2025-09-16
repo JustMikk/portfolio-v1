@@ -157,13 +157,13 @@ export function HeroSection() {
         >
           <div className="text-center group">
             <div className="text-3xl font-bold text-purple-400 mb-2 group-hover:scale-110 transition-transform duration-300">
-              50+
+              15+
             </div>
             <div className="text-muted-foreground text-sm">Projects Built</div>
           </div>
           <div className="text-center group">
             <div className="text-3xl font-bold text-purple-400 mb-2 group-hover:scale-110 transition-transform duration-300">
-              3+
+              4+
             </div>
             <div className="text-muted-foreground text-sm">Years Coding</div>
           </div>

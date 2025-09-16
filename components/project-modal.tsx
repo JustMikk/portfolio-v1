@@ -1,31 +1,36 @@
-"use client"
+"use client";
 
-import Image from "next/image"
-import { Button } from "@/components/ui/button"
-import { Badge } from "@/components/ui/badge"
-import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog"
-import { ExternalLink, Github } from "lucide-react"
+import Image from "next/image";
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+} from "@/components/ui/dialog";
+import { ExternalLink, Github } from "lucide-react";
 
 interface ProjectModalProps {
-  isOpen: boolean
-  onClose: () => void
+  isOpen: boolean;
+  onClose: () => void;
   project: {
-    title: string
-    description: string
-    year: string
-    category: string
-    image: string
-    tools: string[]
-    href?: string
-    github?: string
-    fullDescription?: string
-  }
+    title: string;
+    description: string;
+    year: string;
+    category: string;
+    image: string;
+    tools: string[];
+    href?: string;
+    github?: string;
+    fullDescription?: string;
+  };
 }
 
 export function ProjectModal({ isOpen, onClose, project }: ProjectModalProps) {
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
-      <DialogContent className="max-w-6xl w-[95vw] max-h-[90vh] p-0 overflow-hidden bg-gray-900 border-gray-800">
+      <DialogContent className="sm:min-w-[60vw] max-h-[90vh] p-0 overflow-hidden bg-gray-900 border-gray-800">
         <DialogHeader className="sr-only">
           <DialogTitle>{project.title}</DialogTitle>
         </DialogHeader>
@@ -44,7 +49,10 @@ export function ProjectModal({ isOpen, onClose, project }: ProjectModalProps) {
         {/* Project Details */}
         <div className="p-8 overflow-y-auto flex-1">
           <div className="flex items-center justify-between mb-4">
-            <Badge variant="secondary" className="bg-purple-600/20 text-purple-400 border-purple-600/30">
+            <Badge
+              variant="secondary"
+              className="bg-purple-600/20 text-purple-400 border-purple-600/30"
+            >
               {project.category}
             </Badge>
             <time className="text-gray-400 text-sm" dateTime={project.year}>
@@ -52,13 +60,19 @@ export function ProjectModal({ isOpen, onClose, project }: ProjectModalProps) {
             </time>
           </div>
 
-          <h2 className="text-4xl font-bold text-white mb-6">{project.title}</h2>
+          <h2 className="text-4xl font-bold text-white mb-6">
+            {project.title}
+          </h2>
 
-          <p className="text-gray-300 text-lg leading-relaxed mb-8">{project.fullDescription || project.description}</p>
+          <p className="text-gray-300 text-lg leading-relaxed mb-8">
+            {project.fullDescription || project.description}
+          </p>
 
           {/* Tools Used */}
           <div className="mb-8">
-            <h3 className="text-white font-semibold mb-4 text-xl">Technologies Used</h3>
+            <h3 className="text-white font-semibold mb-4 text-xl">
+              Technologies Used
+            </h3>
             <div className="flex flex-wrap gap-3">
               {project.tools.map((tool) => (
                 <span
@@ -97,7 +111,7 @@ export function ProjectModal({ isOpen, onClose, project }: ProjectModalProps) {
                 variant="secondary"
                 className="bg-gray-800 hover:bg-gray-700 text-gray-300 hover:text-white flex items-center gap-2 transition-all duration-200"
                 onClick={() => {
-                  navigator.clipboard.writeText(project.href!)
+                  navigator.clipboard.writeText(project.href!);
                 }}
               >
                 <ExternalLink className="w-4 h-4" />
@@ -108,5 +122,5 @@ export function ProjectModal({ isOpen, onClose, project }: ProjectModalProps) {
         </div>
       </DialogContent>
     </Dialog>
-  )
+  );
 }

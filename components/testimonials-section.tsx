@@ -8,29 +8,29 @@ import Image from "next/image";
 const testimonials = [
   {
     id: 1,
-    name: "John Anderson",
-    role: "CEO, TechStart",
-    company: "TechStart Inc.",
-    image: "/placeholder.svg?height=80&width=80&text=JA",
+    name: "Nejmia Mohamed",
+    role: "Owner, Addis Path Trailers",
+    company: "Addis Path Trailers",
+    image: "/woman.png?height=80&width=80&text=JA",
     rating: 5,
     content:
       "Mikiyas's creative approach and technical expertise transformed our digital presence completely. The results exceeded our expectations and drove significant business growth.",
   },
   {
     id: 2,
-    name: "Sarah Thompson",
-    role: "Marketing Director",
+    name: "Zikra Ahmed",
+    role: "",
     company: "Creative Agency",
-    image: "/placeholder.svg?height=80&width=80&text=ST",
+    image: "/woman.png?height=80&width=80&text=ST",
     rating: 5,
     content:
       "Working with Mikiyas was an absolute pleasure. His attention to detail and innovative design solutions helped us achieve our vision perfectly.",
   },
   {
     id: 3,
-    name: "Emily Roberts",
-    role: "Product Manager",
-    company: "Digital Solutions",
+    name: "Henok Assefa",
+    role: "CTO, Scales technology solutions",
+    company: "Scales technology solutions",
     image: "/placeholder.svg?height=80&width=80&text=ER",
     rating: 5,
     content:
