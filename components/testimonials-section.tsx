@@ -20,7 +20,7 @@ const testimonials = [
     id: 2,
     name: "Zikra Ahmed",
     role: "",
-    company: "Creative Agency",
+    company: "Private Client",
     image: "/woman.png?height=80&width=80&text=ST",
     rating: 5,
     content:
@@ -31,7 +31,7 @@ const testimonials = [
     name: "Henok Assefa",
     role: "CTO, Scales technology solutions",
     company: "Scales technology solutions",
-    image: "/placeholder.svg?height=80&width=80&text=ER",
+    image: "/man.png?height=80&width=80&text=ER",
     rating: 5,
     content:
       "The level of professionalism and creativity Mikiyas brings to every project is outstanding. Our user engagement increased by 300% after the redesign.",

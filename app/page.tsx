@@ -1,12 +1,13 @@
-import { Navigation } from "@/components/navigation"
-import { HeroSection } from "@/components/hero-section"
-import { SkillsSection } from "@/components/skills-section"
-import { ToolsSection } from "@/components/tools-section"
-import { PortfolioPreview } from "@/components/portfolio-preview"
-import { TestimonialsSection } from "@/components/testimonials-section"
-import { FAQSection } from "@/components/faq-section"
-import { Footer } from "@/components/footer"
-import { AnimatedSection } from "@/components/animated-section"
+"use client";
+import { Navigation } from "@/components/navigation";
+import { HeroSection } from "@/components/hero-section";
+import { SkillsSection } from "@/components/skills-section";
+import { ToolsSection } from "@/components/tools-section";
+import { PortfolioPreview } from "@/components/portfolio-preview";
+import { TestimonialsSection } from "@/components/testimonials-section";
+import { FAQSection } from "@/components/faq-section";
+import { Footer } from "@/components/footer";
+import { AnimatedSection } from "@/components/animated-section";
 
 export default function HomePage() {
   return (
@@ -49,5 +50,5 @@ export default function HomePage() {
 
       <Footer />
     </main>
-  )
+  );
 }

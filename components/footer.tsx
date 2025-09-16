@@ -6,10 +6,15 @@ import {
   Instagram,
   Youtube,
   Dribbble,
+  Facebook,
+  Linkedin,
+  Github,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useRouter } from "next/navigation";
 
 export function Footer() {
+  const router = useRouter();
   return (
     <footer className="bg-card border-t border-border">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
@@ -33,7 +38,7 @@ export function Footer() {
             <ul className="space-y-3">
               <li>
                 <a
-                  href="#about"
+                  href="/about"
                   className="text-muted-foreground hover:text-purple-400 transition-colors duration-200"
                 >
                   About Me
@@ -41,10 +46,10 @@ export function Footer() {
               </li>
               <li>
                 <a
-                  href="#articles"
+                  href="/portfolio"
                   className="text-muted-foreground hover:text-purple-400 transition-colors duration-200"
                 >
-                  Articles
+                  Portfolio
                 </a>
               </li>
               <li>
@@ -52,7 +57,7 @@ export function Footer() {
                   href="#newsletter"
                   className="text-muted-foreground hover:text-purple-400 transition-colors duration-200"
                 >
-                  Newsletter
+                  Newsletter (Coming Soon)
                 </a>
               </li>
               <li>
@@ -74,15 +79,15 @@ export function Footer() {
             <ul className="space-y-3">
               <li>
                 <a
-                  href="#twitter"
+                  href="https://web.facebook.com/profile.php?id=61580339711998"
                   className="text-muted-foreground hover:text-purple-400 transition-colors duration-200"
                 >
-                  Twitter
+                  Facebook
                 </a>
               </li>
               <li>
                 <a
-                  href="#instagram"
+                  href="https://www.instagram.com/_.justmik._/"
                   className="text-muted-foreground hover:text-purple-400 transition-colors duration-200"
                 >
                   Instagram
@@ -90,18 +95,18 @@ export function Footer() {
               </li>
               <li>
                 <a
-                  href="#youtube"
+                  href="https://www.linkedin.com/in/mikiyas-hailegebreal-019487350/"
                   className="text-muted-foreground hover:text-purple-400 transition-colors duration-200"
                 >
-                  Youtube
+                  Linkedin
                 </a>
               </li>
               <li>
                 <a
-                  href="#dribbble"
+                  href="https://github.com/JustMikk"
                   className="text-muted-foreground hover:text-purple-400 transition-colors duration-200"
                 >
-                  Dribbble
+                  Github
                 </a>
               </li>
             </ul>
@@ -118,6 +123,7 @@ export function Footer() {
                     Have an idea?
                   </span>
                   <Button
+                    onClick={() => router.push("/contact")}
                     size="sm"
                     className="bg-purple-600 hover:bg-purple-700 text-white rounded-full w-10 h-10 p-0"
                   >
@@ -152,28 +158,28 @@ export function Footer() {
             {/* Social Links */}
             <div className="flex items-center gap-4">
               <a
-                href="#twitter"
+                href="https://web.facebook.com/profile.php?id=61580339711998"
                 className="w-10 h-10 bg-muted rounded-full flex items-center justify-center hover:bg-purple-500/20 hover:text-purple-400 transition-all duration-200"
               >
-                <Twitter className="w-5 h-5" />
+                <Facebook className="w-5 h-5" />
               </a>
               <a
-                href="#instagram"
+                href="https://www.instagram.com/_.justmik._/"
                 className="w-10 h-10 bg-muted rounded-full flex items-center justify-center hover:bg-purple-500/20 hover:text-purple-400 transition-all duration-200"
               >
                 <Instagram className="w-5 h-5" />
               </a>
               <a
-                href="#youtube"
+                href="https://www.linkedin.com/in/mikiyas-hailegebreal-019487350/"
                 className="w-10 h-10 bg-muted rounded-full flex items-center justify-center hover:bg-purple-500/20 hover:text-purple-400 transition-all duration-200"
               >
-                <Youtube className="w-5 h-5" />
+                <Linkedin className="w-5 h-5" />
               </a>
               <a
-                href="#dribbble"
+                href="https://github.com/JustMikk"
                 className="w-10 h-10 bg-muted rounded-full flex items-center justify-center hover:bg-purple-500/20 hover:text-purple-400 transition-all duration-200"
               >
-                <Dribbble className="w-5 h-5" />
+                <Github className="w-5 h-5" />
               </a>
             </div>
 

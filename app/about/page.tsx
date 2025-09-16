@@ -1,12 +1,15 @@
+"use client";
 import { Navigation } from "@/components/navigation";
 import { FAQSection } from "@/components/faq-section";
 import { Footer } from "@/components/footer";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { AnimatedSection } from "@/components/animated-section";
-import { Twitter, Linkedin, Github } from "lucide-react";
+import { Twitter, Linkedin, Github, Facebook } from "lucide-react";
+import { useRouter } from "next/navigation";
 
 export default function AboutPage() {
+  const router = useRouter();
   const milestones = [
     {
       year: "2021",
@@ -100,13 +103,23 @@ export default function AboutPage() {
                       </h2>
                       <div className="flex gap-3">
                         <Button
+                          onClick={() =>
+                            router.push(
+                              "https://web.facebook.com/profile.php?id=61580339711998"
+                            )
+                          }
                           size="sm"
                           variant="ghost"
                           className="w-8 h-8 p-0 hover:bg-purple-500/20 text-gray-300 hover:text-white"
                         >
-                          <Twitter className="w-4 h-4" />
+                          <Facebook className="w-4 h-4" />
                         </Button>
                         <Button
+                          onClick={() =>
+                            router.push(
+                              "https://www.linkedin.com/in/mikiyas-hailegebreal-019487350/"
+                            )
+                          }
                           size="sm"
                           variant="ghost"
                           className="w-8 h-8 p-0 hover:bg-purple-500/20 text-gray-300 hover:text-white"
@@ -114,6 +127,9 @@ export default function AboutPage() {
                           <Linkedin className="w-4 h-4" />
                         </Button>
                         <Button
+                          onClick={() =>
+                            router.push("https://github.com/JustMikk")
+                          }
                           size="sm"
                           variant="ghost"
                           className="w-8 h-8 p-0 hover:bg-purple-500/20 text-gray-300 hover:text-white"
