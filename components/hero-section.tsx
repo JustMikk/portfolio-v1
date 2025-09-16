@@ -105,12 +105,10 @@ export function HeroSection() {
               <div className="relative w-48 h-48 mx-auto">
                 <div className="absolute inset-0 bg-gradient-to-r from-purple-500 to-indigo-500 rounded-full animate-pulse opacity-20"></div>
                 <div className="absolute inset-2 bg-gradient-to-r from-purple-600 to-indigo-600 rounded-full p-1">
-                  <Image
+                  <img
                     src="/profile.webp"
                     alt="Mikiyas - Full-Stack Developer and Designer"
                     className="w-full h-full rounded-full object-cover border-2 border-white/10"
-                    width={192}
-                    height={192}
                   />
                 </div>
                 <div className="absolute -top-2 -right-2 w-6 h-6 bg-green-500 rounded-full border-2 border-black animate-pulse"></div>

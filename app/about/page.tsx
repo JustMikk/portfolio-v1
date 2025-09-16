@@ -9,38 +9,38 @@ import { Twitter, Linkedin, Github } from "lucide-react";
 export default function AboutPage() {
   const milestones = [
     {
-      year: "2018",
-      title: "A World of Possibilities in 2018",
+      year: "2021",
+      title: "A World of Possibilities in 2021",
       description:
         "I started my journey into the digital world with web design. Fueled by a deep passion for creativity and technology, I took my first steps into the world of web development, where I discovered the vast ocean of design principles and techniques that would shape my understanding of digital experiences.",
     },
     {
-      year: "2019",
-      title: "Learning and Growing in 2019",
+      year: "2022",
+      title: "Learning and Growing in 2022",
       description:
         "I had the opportunity to work with an incredible design agency, where I honed my skills in user experience design and learned the intricacies of user-centered design principles. This experience taught me the importance of understanding user needs and creating intuitive digital experiences from professionally and creatively.",
     },
     {
-      year: "2020",
-      title: "A Corporate Adventure in 2020",
+      year: "2023",
+      title: "A Corporate Adventure in 2023",
       description:
         "I joined a corporate environment as a lead designer, where I gained invaluable experience in project planning and functional websites. It was a year of immense growth and learning, where I developed my skills in team collaboration and project management in a fast-paced environment and sharpened my skills.",
     },
     {
-      year: "2021",
+      year: "2024",
       title: "Entrepreneurial Pursuits Fueled",
       description:
-        "By a desire for creative freedom and the opportunity to work with diverse clients, I decided to venture into freelancing in 2021. This decision allowed me to explore my own creative vision and work with a variety of clients and diverse ideas made with solutions. It was a year of independence and creative exploration.",
+        "By a desire for creative freedom and the opportunity to work with diverse clients, I decided to venture into freelancing in 2024. This decision allowed me to explore my own creative vision and work with a variety of clients and diverse ideas made with solutions. It was a year of independence and creative exploration.",
     },
     {
-      year: "2022",
-      title: "A Collaborative Partnership in 2022",
+      year: "2025",
+      title: "A Collaborative Partnership in 2025",
       description:
         "I formed a strategic partnership with a digital marketing agency, combining my web design expertise with their marketing prowess. This collaboration opened doors to exciting projects and allowed me to work on compelling websites that aligned seamlessly with comprehensive marketing strategies. It was a year of synergistic excellence.",
     },
     {
-      year: "2023",
-      title: "Expanding Horizons in 2023",
+      year: "2025",
+      title: "Expanding Horizons in 2025",
       description:
         "In my path of growth and advancement, I embarked on an exciting journey into emerging technologies and design trends. I expanded my skill set to include advanced user experience. I made a year of pushing boundaries and exploring new frontiers in web design and development.",
     },
@@ -67,8 +67,8 @@ export default function AboutPage() {
                 <div className="w-full max-w-md mx-auto aspect-square bg-gradient-to-br from-purple-400 to-purple-600 rounded-3xl p-8 relative overflow-hidden">
                   <div className="absolute inset-0 bg-gradient-to-br from-purple-400/20 to-purple-600/40"></div>
                   <img
-                    src="/professional-headshot-of-a-web-designer-in-checker.jpg"
-                    alt="Mikiyas Hailegebreal - Professional Web Designer"
+                    src="/profile.webp"
+                    alt="Mikiyas Hailegebreal - Professional Software Engineer"
                     className="w-full h-full object-cover rounded-2xl relative z-10"
                   />
                 </div>
@@ -123,10 +123,10 @@ export default function AboutPage() {
                       </div>
                     </div>
                     <p className="text-gray-300 leading-relaxed">
-                      I am a skilled web designer with a passion for creating
-                      visually stunning and user-friendly websites. With a keen
-                      eye for detail and a commitment to excellence, I
-                      specialize in crafting online experiences that leave a
+                      I am a skilled Software Engineer with a passion for
+                      creating visually stunning and user-friendly websites.
+                      With a keen eye for detail and a commitment to excellence,
+                      I specialize in crafting online experiences that leave a
                       lasting impression. From concept to launch, I collaborate
                       closely with clients to bring their vision to life and
                       help digital presence stand out from the crowd. With my
