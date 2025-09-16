@@ -109,7 +109,6 @@ export function HeroSection() {
                     src="/profile.webp"
                     alt="Mikiyas - Full-Stack Developer and Designer"
                     className="w-full h-full rounded-full object-cover border-2 border-white/10"
-                    loading="eager"
                     width={192}
                     height={192}
                   />
@@ -157,7 +156,7 @@ export function HeroSection() {
         >
           <div className="text-center group">
             <div className="text-3xl font-bold text-purple-400 mb-2 group-hover:scale-110 transition-transform duration-300">
-              15+
+              16+
             </div>
             <div className="text-muted-foreground text-sm">Projects Built</div>
           </div>
