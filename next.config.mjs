@@ -7,8 +7,17 @@ const nextConfig = {
     ignoreBuildErrors: true,
   },
   images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "mikiyashailegebreal.tech",
+        port: "",
+        pathname: "/",
+        search: "",
+      },
+    ],
     unoptimized: true,
   },
-}
+};
 
-export default nextConfig
+export default nextConfig;
