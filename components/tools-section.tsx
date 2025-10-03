@@ -41,7 +41,7 @@ const tools = [
     name: "Git",
     description:
       "Version control system for tracking changes in any set of files.",
-    icon: "/git.svg?height=40&width=40&text=Git",
+    icon: "/Git.svg?height=40&width=40&text=Git",
     category: "Fullstack Development",
   },
   {

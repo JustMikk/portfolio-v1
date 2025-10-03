@@ -70,7 +70,7 @@ export default function AboutPage() {
                 <div className="w-full max-w-md mx-auto aspect-square bg-gradient-to-br from-purple-400 to-purple-600 rounded-3xl p-8 relative overflow-hidden">
                   <div className="absolute inset-0 bg-gradient-to-br from-purple-400/20 to-purple-600/40"></div>
                   <img
-                    src="/profile.webp"
+                    src="/Profile.webp"
                     alt="Mikiyas Hailegebreal - Professional Software Engineer"
                     className="w-full h-full object-cover rounded-2xl relative z-10"
                   />
