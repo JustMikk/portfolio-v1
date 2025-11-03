@@ -32,6 +32,11 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/",
   },
+  icons: {
+    icon: "/logo.png",
+    apple: "/logo.png",
+    shortcut: "/logo.png",
+  },
   openGraph: {
     title: "Mikiyas - Full-Stack Developer & Designer",
     description:
@@ -40,7 +45,7 @@ export const metadata: Metadata = {
     siteName: "Mikiyas Portfolio",
     images: [
       {
-        url: "/og-image.jpg",
+        url: "/logo.png",
         width: 1200,
         height: 630,
         alt: "Mikiyas - Full-Stack Developer Portfolio",
@@ -54,7 +59,7 @@ export const metadata: Metadata = {
     title: "Mikiyas - Full-Stack Developer & Designer",
     description:
       "Passionate full-stack developer creating amazing digital experiences.",
-    images: ["/og-image.jpg"],
+    images: ["/logo.png"],
   },
   robots: {
     index: true,
@@ -87,8 +92,8 @@ export default function RootLayout({
           href="https://fonts.gstatic.com"
           crossOrigin="anonymous"
         />
-        <link rel="icon" href="/favicon.ico" sizes="any" />
-        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+        <link rel="icon" href="/logo.png" />
+        <link rel="apple-touch-icon" href="/logo.png" />
         <meta name="theme-color" content="#8b5cf6" />
         <meta
           name="viewport"

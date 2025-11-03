@@ -1,5 +1,7 @@
 "use client"
 
+import { useState } from "react"
+import { Button } from "@/components/ui/button"
 import { Code, Palette, Smartphone, Video, Layers, Database } from "lucide-react"
 
 const skills = [
@@ -48,6 +50,8 @@ const skills = [
 ]
 
 export function SkillsSection() {
+  const [expanded, setExpanded] = useState(false)
+  const visibleSkills = expanded ? skills : skills.slice(0, 3)
   return (
     <section className="py-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
@@ -62,7 +66,7 @@ export function SkillsSection() {
 
         {/* Skills Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {skills.map((skill, index) => (
+          {visibleSkills.map((skill, index) => (
             <div
               key={index}
               className="group relative p-8 bg-card border border-border rounded-2xl hover:border-purple-500/50 transition-all duration-300 hover:shadow-xl hover:shadow-purple-500/10 hover:-translate-y-2"
@@ -89,6 +93,17 @@ export function SkillsSection() {
               <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
             </div>
           ))}
+        </div>
+
+        {/* Toggle Button */}
+        <div className="text-center mt-10">
+          <Button
+            variant={expanded ? "outline" : "default"}
+            className={expanded ? "border-purple-500/30 text-purple-300 hover:bg-purple-500/10" : "bg-purple-600 hover:bg-purple-700 text-white"}
+            onClick={() => setExpanded((v) => !v)}
+          >
+            {expanded ? "Show less" : "Show more"}
+          </Button>
         </div>
       </div>
     </section>

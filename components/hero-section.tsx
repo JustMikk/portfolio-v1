@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Coffee, Code, Palette } from "lucide-react";
 import Image from "next/image";
+import LightRays from "./LightRays";
 
 export function HeroSection() {
   const [mounted, setMounted] = useState(false);
@@ -16,6 +17,22 @@ export function HeroSection() {
 
   return (
     <section className="relative min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 pt-16 overflow-hidden">
+      {/* Light Rays background */}
+      <div className="absolute left-0 right-0 top-0 h-[600px] pointer-events-none">
+        <LightRays
+          raysOrigin="top-center"
+          raysColor="#ffffff"
+          raysSpeed={1.5}
+          lightSpread={0.8}
+          rayLength={0.5}
+          followMouse={true}
+          mouseInfluence={0.1}
+          noiseAmount={0.1}
+          distortion={0.05}
+          className="custom-rays"
+        />
+      </div>
+
       <div className="absolute inset-0">
         <div className="absolute top-20 left-10 w-20 h-20 border-2 border-purple-500/30 rotate-45 animate-spin-slow"></div>
         <div className="absolute top-40 right-20 w-16 h-16 bg-purple-500/10 rounded-full animate-pulse"></div>

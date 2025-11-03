@@ -68,12 +68,12 @@ export default function ContactPage() {
         <section className="pt-32 pb-20 px-6">
           <div className="max-w-6xl mx-auto text-center">
             <h1 className="text-5xl md:text-7xl font-bold mb-6">
-              We'd <span className="text-purple-400">Love to here</span> from
+              I'd <span className="text-purple-400">Love to here</span> from
               you.
             </h1>
             <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-              Ready to connect and collaborate - drop me a line and let's turn
-              ideas into reality!
+              Let's connect and collaborate - drop me a line and let's turn ideas
+              into reality!
             </p>
           </div>
         </section>

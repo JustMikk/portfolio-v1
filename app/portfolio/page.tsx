@@ -44,7 +44,7 @@ export default function PortfolioPage() {
                 <button
                   key={category.id}
                   onClick={() => setActiveFilter(category.id)}
-                  className={`px-6 py-3 rounded-full text-sm font-medium transition-all duration-300 ${
+                  className={`px-6 py-3 rounded-full text-sm font-medium transition-all duration-300 cursor-pointer ${
                     activeFilter === category.id
                       ? "bg-purple-600 text-white shadow-lg shadow-purple-500/25"
                       : "bg-purple-500/10 text-purple-300 hover:bg-purple-500/20 border border-purple-500/30"
@@ -67,7 +67,7 @@ export default function PortfolioPage() {
                 <p className="text-gray-400 text-lg mb-6">No projects found for this category.</p>
                 <button
                   onClick={() => setActiveFilter("all")}
-                  className="px-6 py-3 rounded-full bg-purple-600 text-white hover:bg-purple-500 transition-colors"
+                  className="px-6 py-3 rounded-full bg-purple-600 text-white hover:bg-purple-500 transition-colors cursor-pointer"
                 >
                   View all projects
                 </button>

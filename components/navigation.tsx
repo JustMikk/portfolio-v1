@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
+import Image from "next/image";
 
 export function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
@@ -45,7 +46,7 @@ export function Navigation() {
           {/* Logo */}
           <div className="flex-shrink-0">
             <Link href="/" aria-label="Mikiyas - Home">
-              <h1 className="text-2xl font-bold text-foreground">Mikiyas.</h1>
+              <Image src="/logo.png" alt="Mikiyas" width={75} height={75} className="shadow-lg shadow-purple-500/25" />
             </Link>
           </div>
 
