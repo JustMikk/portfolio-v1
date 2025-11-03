@@ -6,84 +6,15 @@ import { Footer } from "@/components/footer"
 import { FAQSection } from "@/components/faq-section"
 import { ProjectCard } from "@/components/project-card"
 import { AnimatedSection } from "@/components/animated-section"
+import { portfolioItems } from "@/data/projects"
+import { filterCategories } from "@/data/projects"
 
-const projects = [
-  {
-    title: "DevCraft",
-    description: "Developer Portfolio Website For a Personal Brand",
-    fullDescription:
-      "A modern, responsive portfolio website built with Next.js and Tailwind CSS. Features smooth animations, dark theme, and optimized performance for showcasing development projects and skills.",
-    year: "2023",
-    category: "Web Design",
-    image: "/modern-developer-portfolio-website-dark-theme.jpg",
-    tools: ["Next.js", "React", "TypeScript", "Tailwind", "Vercel"],
-    href: "https://devcraft-demo.vercel.app",
-    github: "https://github.com/username/devcraft",
-  },
-  {
-    title: "Futuretech",
-    description: "Blog Website For a Business Brand",
-    fullDescription:
-      "A cutting-edge tech blog platform with content management system, user authentication, and real-time comments. Built with modern web technologies for optimal performance and SEO.",
-    year: "2023",
-    category: "Fullstack Development",
-    image: "/futuristic-tech-blog-website-dark-interface.jpg",
-    tools: ["Next.js", "Node.js", "MongoDB", "TypeScript", "Tailwind"],
-    href: "https://futuretech-demo.vercel.app",
-    github: "https://github.com/username/futuretech",
-  },
-  {
-    title: "Testant",
-    description: "Blog Website For a Business Brand",
-    fullDescription:
-      "Clean and professional business blog with advanced content management, SEO optimization, and analytics integration. Designed for maximum readability and user engagement.",
-    year: "2023",
-    category: "Web Design",
-    image: "/clean-business-blog-website-light-interface.jpg",
-    tools: ["React", "JavaScript", "CSS", "HTML", "Firebase"],
-    href: "https://testant-demo.vercel.app",
-  },
-  {
-    title: "Klothink",
-    description: "Ecommerce Website For a Business Brand",
-    fullDescription:
-      "Full-featured e-commerce platform with shopping cart, payment integration, inventory management, and admin dashboard. Built for scalability and optimal user experience.",
-    year: "2023",
-    category: "Fullstack Development",
-    image: "/modern-ecommerce-clothing-website.jpg",
-    tools: ["Next.js", "PostgreSQL", "TypeScript", "Tailwind", "Stripe"],
-    href: "https://klothink-demo.vercel.app",
-    github: "https://github.com/username/klothink",
-  },
-  {
-    title: "Brand Identity Design",
-    description: "Complete brand identity and logo design",
-    fullDescription:
-      "Comprehensive brand identity package including logo design, color palette, typography, and brand guidelines. Created using modern design principles and industry best practices.",
-    year: "2023",
-    category: "Graphics Design",
-    image: "/modern-brand-identity-design-showcase.jpg",
-    tools: ["Figma", "Photoshop", "Illustrator"],
-  },
-  {
-    title: "Product Launch Video",
-    description: "Promotional video for tech startup",
-    fullDescription:
-      "High-quality promotional video featuring motion graphics, professional voiceover, and compelling storytelling. Designed to showcase product features and drive user engagement.",
-    year: "2023",
-    category: "Video Editing",
-    image: "/video-editing-timeline-interface.jpg",
-    tools: ["After Effects", "Premiere Pro", "Photoshop"],
-  },
-]
-
-const categories = ["All", "Web Design", "Fullstack Development", "Graphics Design", "Video Editing"]
 
 export default function PortfolioPage() {
-  const [activeFilter, setActiveFilter] = useState("All")
+  const [activeFilter, setActiveFilter] = useState("all")
 
   const filteredProjects =
-    activeFilter === "All" ? projects : projects.filter((project) => project.category === activeFilter)
+    activeFilter === "all" ? portfolioItems : portfolioItems.filter((project) => project.category === activeFilter)
 
   return (
     <div className="min-h-screen bg-black text-white relative overflow-hidden">
@@ -109,18 +40,18 @@ export default function PortfolioPage() {
             </p>
 
             <div className="flex flex-wrap justify-center gap-3 mb-8">
-              {categories.map((category) => (
+              {filterCategories.map((category) => (
                 <button
-                  key={category}
-                  onClick={() => setActiveFilter(category)}
+                  key={category.id}
+                  onClick={() => setActiveFilter(category.id)}
                   className={`px-6 py-3 rounded-full text-sm font-medium transition-all duration-300 ${
-                    activeFilter === category
+                    activeFilter === category.id
                       ? "bg-purple-600 text-white shadow-lg shadow-purple-500/25"
                       : "bg-purple-500/10 text-purple-300 hover:bg-purple-500/20 border border-purple-500/30"
                   }`}
-                  aria-label={`Filter projects by ${category}`}
+                  aria-label={`Filter projects by ${category.label}`}
                 >
-                  {category}
+                  {category.label}
                 </button>
               ))}
             </div>
@@ -131,22 +62,34 @@ export default function PortfolioPage() {
       <AnimatedSection>
         <section className="py-16 px-4">
           <div className="max-w-6xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {filteredProjects.map((project, index) => (
-                <ProjectCard
-                  key={`${project.title}-${activeFilter}`}
-                  title={project.title}
-                  description={project.description}
-                  year={project.year}
-                  category={project.category}
-                  image={project.image}
-                  tools={project.tools}
-                  href={project.href}
-                  github={project.github}
-                  fullDescription={project.fullDescription}
-                />
-              ))}
-            </div>
+            {filteredProjects.length === 0 ? (
+              <div className="flex flex-col items-center justify-center py-24 text-center">
+                <p className="text-gray-400 text-lg mb-6">No projects found for this category.</p>
+                <button
+                  onClick={() => setActiveFilter("all")}
+                  className="px-6 py-3 rounded-full bg-purple-600 text-white hover:bg-purple-500 transition-colors"
+                >
+                  View all projects
+                </button>
+              </div>
+            ) : (
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {filteredProjects.map((project, index) => (
+                  <ProjectCard
+                    key={`${project.title}-${activeFilter}`}
+                    title={project.title}
+                    description={project.description}
+                    year={project.year}
+                    category={project.category}
+                    image={project.image}
+                    tools={project.tools}
+                    href={project.href}
+                    github={project.github}
+                    fullDescription={project.fullDescription}
+                  />
+                ))}
+              </div>
+            )}
           </div>
         </section>
       </AnimatedSection>

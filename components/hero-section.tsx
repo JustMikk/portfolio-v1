@@ -106,7 +106,7 @@ export function HeroSection() {
                 <div className="absolute inset-0 bg-gradient-to-r from-purple-500 to-indigo-500 rounded-full animate-pulse opacity-20"></div>
                 <div className="absolute inset-2 bg-gradient-to-r from-purple-600 to-indigo-600 rounded-full p-1">
                   <img
-                    src="/Profile.webp"
+                    src="/profile.jpg"
                     alt="Mikiyas - Full-Stack Developer and Designer"
                     className="w-full h-full rounded-full object-cover border-2 border-white/10"
                   />
